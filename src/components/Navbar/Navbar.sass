@@ -20,6 +20,7 @@
   color: $color-secondary
 
 .navbar-logo-text
+  margin-top: -0.2rem
   font-size: 1.5rem
   margin-left: 0.6rem
   letter-spacing: 0.04rem
@@ -29,6 +30,8 @@
 
 .navbar-menu
   position: relative
+  @media (max-width: $media-md)
+    display: none
 
 .navbar-menu-group
   display: flex
@@ -52,4 +55,4 @@
   background-color: $color-primary
   transition: all 0.1s
   position: absolute
-  bottom: -10px
+  bottom: -6px

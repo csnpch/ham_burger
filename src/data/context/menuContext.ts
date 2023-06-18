@@ -3,10 +3,14 @@ import { createContext } from 'react';
 
 export interface MenuContextInterface {
     onMenu: menuSlug,
-    setOnMenu: (value: menuSlug) => void
+    setOnMenu: (value: menuSlug) => void,
+    burgerMenu: boolean,
+    setBurgerMenu: (value: boolean) => void
 }
 
 export const MenuContext = createContext<MenuContextInterface>({
     onMenu: 'home',
-    setOnMenu: () => {}
+    setOnMenu: () => {},
+    burgerMenu: false,
+    setBurgerMenu: () => {}
 })

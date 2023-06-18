@@ -1,1 +1,35 @@
 @use './../../assets/css/variables' as *
+
+.burger-menu
+  display: flex
+  flex-direction: column
+  cursor: pointer
+  padding: 0.4rem 0
+  border-radius: 50%
+  row-gap: 6px
+  
+
+  @media (min-width: $media-md)
+    display: none
+
+
+.burger-menu .line
+  width: 1.8rem
+  height: 0.2rem
+  transition: all 0.2s
+  background-color: $color-primary
+  border-radius: 4px
+
+.burger-menu .line.active
+  &:nth-child(1)
+      transform: rotate(45deg) translate(0.40rem, 0.40rem)
+      
+.burger-menu .line.active
+  &:nth-child(2)
+      transform: translateX(-40%)
+      width: 0
+      opacity: 0
+
+.burger-menu .line.active
+  &:nth-child(3)
+      transform: rotate(-45deg) translate(0.40rem, -0.40rem)

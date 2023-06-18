@@ -46,6 +46,11 @@ export default function Navbar() {
   }
 
 
+  const handleClickBurgerMenu = (state: boolean) => {
+    menu_context.setBurgerMenu(state)
+  }
+
+
   useEffect(() => {
     moveUnderlineToActiveMenu()
   }, [menu_context.onMenu])
@@ -69,6 +74,9 @@ export default function Navbar() {
           </span>
         </div>
 
+        <BurgerMenu
+          onClick={handleClickBurgerMenu}
+        />
 
         {/* Right content */}
         <div className={`navbar-menu`}>
@@ -88,7 +96,7 @@ export default function Navbar() {
                     onClick={() => handleClickMenu(item)}
                   >
                     <div
-                      ref={(element) => menuRef.current[index] = element}
+                      ref={(el) => menuRef.current[index] = el}
                       className={_class(`
                         cursor-pointer
                         navbar-menu-item-name${menu_context.onMenu === item.slug ? ':active' : ''}
