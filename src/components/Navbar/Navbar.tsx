@@ -62,7 +62,10 @@ export default function Navbar() {
       <nav className={`navbar-container`}>
 
         {/* Left content */}
-        <div className={`navbar-logo`}>
+        <div 
+          className={`navbar-logo`}
+          onClick={() => handleClickMenu(menu[0])}
+        >
           <FontAwesomeIcon
             icon={faBurger}
             className={`navbar-logo-icon`}

@@ -1,4 +1,3 @@
-import './LayoutMain.sass'
 import { useState } from 'react'
 import { MenuContext } from '@/data/context/menuContext'
 import { menuSlug } from '@/interface/type'
@@ -14,12 +13,15 @@ export default function LayoutMain({
 }: propsInterface) {
 
   const [onMenu, setOnMenu] = useState<menuSlug>('home')
+  const [burgerMenu, setBurgerMenu] = useState<boolean>(false)
 
   return (
     <>
       <MenuContext.Provider value={{
         onMenu: onMenu,
-        setOnMenu: setOnMenu
+        setOnMenu: setOnMenu,
+        burgerMenu: burgerMenu,
+        setBurgerMenu: setBurgerMenu
       }}>
 
         <div className={`container`}>
