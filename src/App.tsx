@@ -24,6 +24,10 @@ function App() {
 
           <Education />
           <Experience />
+          <br />
+          <br />
+          <br />
+          <br />
           
         </ContainerBase>
 

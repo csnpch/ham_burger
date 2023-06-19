@@ -13,7 +13,7 @@ interface dataTimelineInterface {
 export const dataTimeline: dataTimelineInterface[] = [
   {
     title: `Hai Dashbaord ( WebApp )`,
-    subtitle: `( Freelance | cooperate with the government )`,
+    subtitle: `( Frontend | cooperate with the government )`,
     description: `The Project of Quality Data Project for Hospitals Nationwide Requested to cooperate with government agencies`,
     date: {
       start: `June, 2023`,

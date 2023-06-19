@@ -20,7 +20,7 @@ export default function Education() {
           </div>
 
           {/* right or bottom content */}
-          <div className={`content-container`}>
+          <div className={`edu-content-container`}>
             
             <Topic
               title={`MY EDUCATION`}
