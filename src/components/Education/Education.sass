@@ -1,4 +1,132 @@
 @use './../../assets/css/variables' as *
 
+
 .education-container
-  height: 100vh
+  display: flex
+  padding: 6rem 0
+  column-gap: 4rem
+  justify-content: space-evenly
+
+  @media (max-width: $media-lg)
+    flex-direction: column
+    padding: 4rem 0
+    row-gap: 2.2rem
+    padding-top: 2.8rem
+
+
+.banner-img
+  max-height: 100%
+  overflow: hidden
+
+
+.content-container
+  display: flex
+  flex-direction: column
+  justify-content: center
+  gap: 2rem
+
+  @media (max-width: $media-lg)
+    gap: 1.6rem
+
+
+.topic-container
+  text-align: center
+  font-family: $font-secondary
+  display: flex
+  flex-direction: column
+  gap: 1rem
+
+
+.topic-container .title
+  display: flex
+  justify-content: center
+  gap: 1rem
+  font-size: 1.6rem
+
+  @media (max-width: $media-lg)
+    font-size: 1.2rem
+    padding-top: 0.6rem
+
+
+.topic-container .sub-title
+  color: $color-primary-drop
+  font-size: 0.9rem
+  line-height: 1.4rem
+
+  @media (max-width: $media-lg)
+    font-size: 0.8rem
+
+
+.edu-card-container
+  display: flex
+  flex-direction: column
+  gap: 1.4rem
+
+  @media (max-width: $media-2xl)
+    gap: 1.2rem
+  
+  @media (max-width: $media-lg)
+    gap: 1rem
+
+
+
+.edu-card-item
+  width: 100%
+  display: grid
+  gap: 2rem
+  grid-template-columns: 6.2rem 1fr
+  background: $bg-secondary
+  padding: 2rem 1.8rem 2rem 1rem
+  border-radius: 1.2rem
+  letter-spacing: 0.02rem
+
+  @media (max-width: $media-2xl)
+    padding: 1.5rem 0.4rem 1.5rem 1.2rem
+    border-radius: 0.8rem
+
+  @media (max-width: $media-lg)
+    grid-template-columns: 5.6rem 1fr
+    gap: 1.2rem
+    padding: 0.8rem 0.6rem 0.8rem 0.8rem
+
+
+
+.timeline-group
+  display: flex
+  flex-direction: column
+  justify-content: center
+  gap: 0.4rem
+
+
+.detail-group
+  display: flex
+  flex-direction: column
+  gap: 0.4rem
+
+
+.edu-card-item .timeline-group
+  font-size: 1.06rem
+  text-align: right
+
+
+.timeline-group .status
+  font-size: 0.8rem
+  color: $color-primary-drop
+
+  @media (max-width: $media-lg)
+    font-size: 0.7rem
+
+
+.detail-group .title
+  font-size: 1.08rem
+
+  @media (max-width: $media-2xl)
+    font-size: 0.88rem
+
+
+.detail-group .sub-title
+  color: $color-primary-drop
+  font-size: 0.9rem
+
+  @media (max-width: $media-lg)
+    font-size: 0.8rem
