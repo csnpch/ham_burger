@@ -1,7 +1,7 @@
 import './Hero.sass'
 import ProfileImg from '@/assets/img/profile.png'
 import { contacts } from './data'
-import ContainerBase from '../Layout/ContainerBase'
+import ContainerBase from './../../Layout/ContainerBase'
 
 export default function Hero() {
 

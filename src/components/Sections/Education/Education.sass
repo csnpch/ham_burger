@@ -1,4 +1,4 @@
-@use './../../assets/css/variables' as *
+@use './../../../assets/css/variables' as *
 
 
 .education-container
@@ -6,6 +6,7 @@
   padding: 6rem 0
   column-gap: 4rem
   justify-content: space-evenly
+  align-items: center
 
   @media (max-width: $media-lg)
     flex-direction: column
@@ -14,9 +15,18 @@
     padding-top: 2.8rem
 
 
-.banner-img
-  max-height: 100%
+.education-container .banner-img
   overflow: hidden
+  width: 100%
+  display: flex
+  justify-content: center
+
+.education-container .banner-img img
+  width: 68%
+
+  @media (max-width: $media-lg)
+    width: 80%
+
 
 
 .content-container
@@ -29,37 +39,11 @@
     gap: 1.6rem
 
 
-.topic-container
-  text-align: center
-  font-family: $font-secondary
-  display: flex
-  flex-direction: column
-  gap: 1rem
-
-
-.topic-container .title
-  display: flex
-  justify-content: center
-  gap: 1rem
-  font-size: 1.6rem
-
-  @media (max-width: $media-lg)
-    font-size: 1.2rem
-    padding-top: 0.6rem
-
-
-.topic-container .sub-title
-  color: $color-primary-drop
-  font-size: 0.9rem
-  line-height: 1.4rem
-
-  @media (max-width: $media-lg)
-    font-size: 0.8rem
-
-
 .edu-card-container
   display: flex
   flex-direction: column
+  justify-content: flex-start
+  align-items: center
   gap: 1.4rem
 
   @media (max-width: $media-2xl)
@@ -69,9 +53,8 @@
     gap: 1rem
 
 
-
 .edu-card-item
-  width: 100%
+  width: 80%
   display: grid
   gap: 2rem
   grid-template-columns: 6.2rem 1fr
@@ -83,12 +66,12 @@
   @media (max-width: $media-2xl)
     padding: 1.5rem 0.4rem 1.5rem 1.2rem
     border-radius: 0.8rem
+    width: 100%
 
   @media (max-width: $media-lg)
     grid-template-columns: 5.6rem 1fr
     gap: 1.2rem
     padding: 0.8rem 0.6rem 0.8rem 0.8rem
-
 
 
 .timeline-group
@@ -130,3 +113,4 @@
 
   @media (max-width: $media-lg)
     font-size: 0.8rem
+

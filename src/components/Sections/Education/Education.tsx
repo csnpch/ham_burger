@@ -1,9 +1,8 @@
 import './Education.sass'
 import EduBanner from '@/assets/img/education_banner.svg'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 import { dataEducation } from './data'
 import { _class } from '@/utils/functions/helper'
+import Topic from './../../Topic/Topic'
 
 
 
@@ -23,15 +22,14 @@ export default function Education() {
           {/* right or bottom content */}
           <div className={`content-container`}>
             
-            <div className={`topic-container`}>
-              <div className={`title`}>
-                <FontAwesomeIcon icon={faGraduationCap} />
-                <p>MY EDUCATION</p>
-              </div>
-              <p className={`sub-title`}>
-                Education Is Not The Learning Of Facts, But The Training Of The Mind To Think. 
-              </p>
-            </div>
+            <Topic
+              title={`MY EDUCATION`}
+              subTitle={`Education Is Not The Learning Of Facts, But The Training Of The Mind To Think.`}
+              classes={{
+                title: 'justify-center',
+                subTitle: 'text-center'
+              }}
+            />
 
             <div className={`edu-card-container`}>
               {

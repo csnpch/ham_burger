@@ -2,9 +2,10 @@ import './App.sass'
 import '@/assets/css/index.sass'
 import LayoutMain from './components/Layout/LayoutMain'
 import Navbar from './components/Navbar/Navbar'
-import Hero from './components/Hero/Hero'
+import Hero from './components/Sections/Hero/Hero'
 import ContainerBase from './components/Layout/ContainerBase'
-import Education from './components/Education/Education'
+import Education from './components/Sections/Education/Education'
+import Experience from './components/Sections/Experience/Experience'
 
 
 
@@ -22,6 +23,7 @@ function App() {
         <ContainerBase>
 
           <Education />
+          <Experience />
           
         </ContainerBase>
 
