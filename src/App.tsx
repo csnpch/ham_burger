@@ -1,11 +1,11 @@
 import './App.sass'
 import '@/assets/css/index.sass'
+import ContainerBase from './components/Layout/ContainerBase'
 import LayoutMain from './components/Layout/LayoutMain'
 import Navbar from './components/Navbar/Navbar'
-import Hero from './components/Sections/Hero/Hero'
-import ContainerBase from './components/Layout/ContainerBase'
-import Education from './components/Sections/Education/Education'
-import Experience from './components/Sections/Experience/Experience'
+import Hero from './Sections/Hero/Hero'
+import Education from './Sections/Education/Education'
+import Experience from './Sections/Experience/Experience'
 
 
 

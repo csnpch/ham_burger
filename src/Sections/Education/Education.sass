@@ -1,4 +1,4 @@
-@use './../../../assets/css/variables' as *
+@use './../../assets/css/variables.sass' as *
 
 
 .education-container
@@ -67,6 +67,10 @@
   padding: 2rem 1.8rem 2rem 1rem
   border-radius: 1.2rem
   letter-spacing: 0.02rem
+  transition: all 0.2s ease-in-out
+
+  &:hover
+    filter: brightness(1.1)
 
   @media (max-width: $media-2xl)
     padding: 1.5rem 0.4rem 1.5rem 1.4rem

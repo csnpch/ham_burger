@@ -2,7 +2,7 @@ import './Education.sass'
 import EduBanner from '@/assets/img/education_banner.svg'
 import { dataEducation } from './data'
 import { _class } from '@/utils/functions/helper'
-import Topic from './../../Topic/Topic'
+import Topic from '@/components/Topic/Topic'
 
 
 

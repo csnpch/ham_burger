@@ -1,12 +1,16 @@
-interface dataTimelineInterface {
-  title: string;
-  subtitle: string;
-  description: string;
+import { IdevToolsItem, dev_tools } from "@/data/dev_tools"
+
+export interface dataTimelineInterface {
+  title: string
+  subtitle: string
+  description: string
   date: {
-    start: string;
-    end: string;
-    helper: string;
+    start: string
+    end: string
+    helper: string
   }
+  link: string
+  tools_used: IdevToolsItem[]
 }
 
 
@@ -19,7 +23,16 @@ export const dataTimeline: dataTimelineInterface[] = [
       start: `June, 2023`,
       end: `May, 2023`,
       helper: '2 months',
-    }
+    },
+    link: `#`,
+    tools_used: [
+      dev_tools.languages.typescript,
+      dev_tools.languages.react,
+      dev_tools.tools.redux,
+      dev_tools.tools.tailwind_css,
+      dev_tools.tools.antd,
+      dev_tools.tools.mantine_ui,
+    ],
   },
   {
     title: `iWant ( Mobile App, APK )`,
@@ -29,7 +42,12 @@ export const dataTimeline: dataTimelineInterface[] = [
       start: `April, 2023`,
       end: ``,
       helper: '1 months',
-    }
+    },
+    link: `#`,
+    tools_used: [
+      dev_tools.tools.android_studio,
+      dev_tools.languages.kotlin,
+    ],
   },
   {
     title: `Queueee ( Realtime WebApp )`,
@@ -39,7 +57,17 @@ export const dataTimeline: dataTimelineInterface[] = [
       start: `Jan, 2023`,
       end: ``,
       helper: '3 weeks',
-    }
+    },
+    link: `#`,
+    tools_used: [
+      dev_tools.languages.javascript,
+      dev_tools.languages.nodejs,
+      dev_tools.languages.react,
+      dev_tools.tools.redux,
+      dev_tools.tools.socket_io,
+      dev_tools.tools.tailwind_css,
+      dev_tools.tools.antd,
+    ],
   },
   {
     title: `Siblings matching ( WebApp )`,
@@ -49,7 +77,14 @@ export const dataTimeline: dataTimelineInterface[] = [
       start: `Nov, 2022`,
       end: ``,
       helper: '1 weeks',
-    }
+    },
+    link: `#`,
+    tools_used: [
+      dev_tools.languages.javascript,
+      dev_tools.languages.nodejs,
+      dev_tools.languages.vue,
+      dev_tools.tools.tailwind_css,
+    ],
   },
   {
     title: `Dormitory System ( WebApp )`,
@@ -59,6 +94,12 @@ export const dataTimeline: dataTimelineInterface[] = [
       start: `Jun, 2022`,
       end: `Apr, 2022`,
       helper: '3 months',
-    }
+    },
+    link: `#`,
+    tools_used: [
+      dev_tools.languages.php,
+      dev_tools.tools.tailwind_css,
+      dev_tools.tools.mysql
+    ],
   },
 ] 

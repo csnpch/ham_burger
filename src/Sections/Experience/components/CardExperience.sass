@@ -1,62 +1,22 @@
-@use './../../../assets/css/variables' as *
+@use './../../../assets/css/variables.sass' as *
 
 $line-pos-left: -1.6rem 
 
-  
-.experience-container
-  width: 100%
+.card-item-group
+  height: 100%
   display: flex
   flex-direction: row
-  justify-content: space-between
-  align-items: flex-start
-  column-gap: 10rem
-  padding-top: 8rem
+  background: $bg-secondary
+  padding: 1.2rem 1.4rem
+  border-radius: 0.6rem
+  transition: all 0.2s ease-in-out
 
-  @media (max-width: $media-2xl)
-    row-gap: 9rem
-
-
-  @media (max-width: $media-lg)
-    flex-direction: column-reverse
-    row-gap: 6.4rem
-    padding-top: 0rem
-    margin-top: -2rem
-
-
-.experience-container .banner-img
-  width: 100%
-  overflow: hidden
-  top: 15%
-  transform: translateY(25%)
-  position: sticky
+  &:hover
+    filter: brightness(1.1)
 
   @media (max-width: $media-lg)
-    position: relative
-    display: flex
-    justify-content: center
+    padding: 0.9rem 1rem
 
-
-.experience-container .banner-img img
-  width: 68%
-
-  @media (max-width: $media-2xl)
-    width: 80%
-
-
-.exp-content-container
-  width: 100%
-  display: flex
-  flex-direction: column
-  gap: 3.2rem
-
-  @media (max-width: $media-lg)
-    gap: 2.6rem
-
-
-.exp-content-container .timeline-container
-  width: 100%
-  height: 100%
-  
 
 .timeline-container .card-container
   display: flex
@@ -66,19 +26,8 @@ $line-pos-left: -1.6rem
   padding-left: 8rem
 
   @media (max-width: $media-lg)
-    padding-left: 5.8rem
-
-
-.card-item-group
-  height: 100%
-  display: flex
-  flex-direction: row
-  background: $bg-secondary
-  padding: 1.2rem 1.4rem
-  border-radius: 0.6rem
-
-  @media (max-width: $media-lg)
-    padding: 0.9rem 1rem
+    padding-left: 4.8rem
+    gap: 2rem
 
 
 .timeline-container .card-item
@@ -162,6 +111,9 @@ $line-pos-left: -1.6rem
   justify-content: space-between
   text-align: right
 
+  @media (max-width: $media-lg)
+    left: -5.4rem
+
 
 .timeline-item.one-range
   justify-content: center
@@ -170,16 +122,25 @@ $line-pos-left: -1.6rem
 .timeline-item .date
   font-size: 0.8rem
 
+  @media (max-width: $media-lg)
+    font-size: 0.7rem
+
 
 .timeline-item .helper-text
   color: $color-primary-drop
   font-size: 0.7rem
 
+  @media (max-width: $media-lg)
+    font-size: 0.6rem
+
 
 .timeline-item .helper-text.rotate
   transform: rotate(-90deg) translateY(160%)
   text-align: center
-  
+
+  @media (max-width: $media-lg)
+    transform: rotate(-90deg) translateY(180%)
+
 
 .container-card-item .line
   position: absolute
@@ -190,6 +151,9 @@ $line-pos-left: -1.6rem
   height: 86%
   background: $color-primary
   z-index: 1
+
+  @media (max-width: $media-lg)
+    left: $line-pos-left + 0.4rem
 
 
 .container-card-item .line::after
@@ -204,7 +168,8 @@ $line-pos-left: -1.6rem
   border-radius: 50%
   border: 0.1rem solid $color-primary
   z-index: 1
-  
+
+
 .container-card-item .line::before
   // border with circle
   content: ''
@@ -226,7 +191,10 @@ $line-pos-left: -1.6rem
   width: 0.1rem
   height: 2.4rem
   z-index: 1
-  background-image: linear-gradient(to bottom, #FFFFFF40 50%, transparent 50%)
+  background-image: linear-gradient(to bottom, #FFFFFF50 50%, transparent 50%)
   background-size: 100% 0.64rem
   background-repeat: repeat-y
   background-position: center
+
+  @media (max-width: $media-lg)
+    left: $line-pos-left + 0.4rem
