@@ -7,12 +7,27 @@ import ExperienceBanner from '@/assets/img/experience_banner.svg'
 import { dataTimeline } from './data'
 import { _class } from '@/utils/functions/helper'
 import CardExperience from './components/CardExperience'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFigma } from '@fortawesome/free-brands-svg-icons'
 
 
 interface propsInterface {}
 
 
 export default function Experience({}: propsInterface) {
+
+  const ListItemExperience = dataTimeline.map((item, index) => (
+    <CardExperience 
+      key={index}
+      data={item}
+      classes={{
+        title: _class(`${index === 0 && 'color-secondary'}`),
+        timeline: {
+          date_start: _class(`${index === 0 && 'color-secondary'}`),
+        }
+      }}
+    />
+  ))
 
   
   return (
@@ -24,6 +39,7 @@ export default function Experience({}: propsInterface) {
         <div className={`exp-content-container`}>
 
           <Topic
+            icon={<FontAwesomeIcon icon={faFigma} />}
             title={`EXPERIENCE`}
             subTitle={`Experience may be minimal but definitely full of heart.`}
           />
@@ -31,20 +47,7 @@ export default function Experience({}: propsInterface) {
           <div className={`timeline-container`}>
             
             <div className={`card-container`}>
-              {
-                dataTimeline.map((item, index) => (
-                  <CardExperience 
-                    key={index}
-                    data={item}
-                    classes={{
-                      title: _class(`${index === 0 && 'color-secondary'}`),
-                      timeline: {
-                        date_start: _class(`${index === 0 && 'color-secondary'}`),
-                      }
-                    }}
-                  />
-                ))
-              }
+              { ListItemExperience }
             </div>
 
           </div>

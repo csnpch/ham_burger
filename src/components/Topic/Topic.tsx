@@ -1,13 +1,12 @@
 import './Topic.sass'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 import { _class } from '@/utils/functions/helper'
 
 
 interface propsInterface {
   title: string,
   subTitle: string,
+  icon?: React.ReactNode,
   classes?: {
     container?: string,
     title?: string,
@@ -31,7 +30,7 @@ export default function Topic(props: propsInterface) {
           ${props.classes?.title || ''}
         `)}>
         
-          <FontAwesomeIcon icon={faGraduationCap} />
+          { props.icon || <></>}
           <p>
             { props.title }
           </p>

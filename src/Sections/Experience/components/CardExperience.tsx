@@ -91,9 +91,13 @@ export default function CardExperience(props: propsInterface) {
             </p>
           </div>
 
-          <div className={`more-detail`}>
+          <a
+            href={props.data.link}
+            target='_blank' 
+            className={`more-detail`}
+          >
             <FontAwesomeIcon icon={faAngleRight} />
-          </div>
+          </a>
 
         </div>
 

@@ -6,6 +6,7 @@ import Navbar from './components/Navbar/Navbar'
 import Hero from './Sections/Hero/Hero'
 import Education from './Sections/Education/Education'
 import Experience from './Sections/Experience/Experience'
+import ProjectMade from './Sections/ProjectMade/ProjectMade'
 
 
 
@@ -24,10 +25,13 @@ function App() {
 
           <Education />
           <Experience />
-          <br />
-          <br />
-          <br />
-          <br />
+          <ProjectMade />
+          
+          {
+            [0,1,2,3,4,5,6,7,8,9,1,2,3,4].map(item => (
+              <br key={item} />
+            ))
+          }
           
         </ContainerBase>
 

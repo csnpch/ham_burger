@@ -1,4 +1,4 @@
-interface TimelineEducationInterface {
+export interface TimelineEducationInterface {
   timeline: string
   title: string
   subtitle: string

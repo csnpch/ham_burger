@@ -3,10 +3,24 @@ import EduBanner from '@/assets/img/education_banner.svg'
 import { dataEducation } from './data'
 import { _class } from '@/utils/functions/helper'
 import Topic from '@/components/Topic/Topic'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
+import CardEducation from './components/CardEducation'
 
 
 
 export default function Education() {
+
+
+  const ListItemEducation = dataEducation.map((item, index) => (
+    <CardEducation 
+      data={item}
+      classes={{
+        timeline: `${index === 0 && 'color-secondary'}`,
+        title: `${index === 0 && 'color-secondary'}`,
+      }}
+    />
+  ))
 
 
   return (
@@ -23,6 +37,7 @@ export default function Education() {
           <div className={`edu-content-container`}>
             
             <Topic
+              icon={<FontAwesomeIcon icon={faGraduationCap} />}
               title={`MY EDUCATION`}
               subTitle={`Education Is Not The Learning Of Facts, But The Training Of The Mind To Think.`}
               classes={{
@@ -32,39 +47,7 @@ export default function Education() {
             />
 
             <div className={`edu-card-container`}>
-              {
-                dataEducation.map((item, index) => (
-                  <div 
-                    key={index}
-                    className={`edu-card-item`}
-                  >
-                    {/* left */}
-                    <div className={`timeline-group`}>
-                      <p className={_class(`
-                        timeline
-                        ${index === 0 && 'color-secondary'}
-                      `)}>
-                        { item.timeline }
-                      </p>
-                      <p className={`status`}>
-                        { item.status }
-                      </p>
-                    </div>
-                    {/* right */}
-                    <div className={`detail-group`}>
-                      <p className={_class(`
-                        title
-                        ${index === 0 && 'color-secondary'}
-                      `)}>
-                        { item.title }
-                      </p>
-                      <p className={`sub-title`}>
-                        { item.subtitle }
-                      </p>
-                    </div>
-                  </div>
-                ))
-              }
+              { ListItemEducation }
             </div>
 
           </div>
