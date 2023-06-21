@@ -18,6 +18,14 @@
     .card-project-content .title
       padding: 0.28rem 0.5rem
   
+
+
+  @media (max-width: $media-2xl)
+    &:hover
+      .card-project-content
+        top: 5rem
+
+
   
 .card-project-container .position-wrapper
   position: relative
@@ -27,6 +35,9 @@
   height: 16rem
   border-radius: 0.6rem
   overflow: hidden
+
+  @media (max-width: $media-2xl)
+    height: 13.3rem
 
 
 .card-project-img 
@@ -60,11 +71,14 @@
   transition: all 0.2s ease-in-out
   background: #00000090
   position: absolute
-  top: 13.3rem
+  top: 13.5rem
   left: 0
   width: 100%
   height: 100%
   z-index: 3
+
+  @media (max-width: $media-2xl)
+    top: 11.1rem
 
 
 .card-project-content .title
@@ -75,7 +89,12 @@
   color: black
   text-align: center
   font-weight: 500
+  font-size: 0.86rem
   letter-spacing: 0.04rem
+
+  @media (max-width: $media-2xl)
+    padding: 0.5rem 0.5rem
+    font-size: 0.8rem
 
 
 .card-project-content .description
@@ -85,6 +104,7 @@
 
 
 .view-more
+  width: 100%
   cursor: pointer
   border: 2px solid #FFFFFF80
   border-radius: 0.6rem
@@ -108,6 +128,11 @@
     
     .icon
       transform: scale(1.04)
+
+  @media (max-width: $media-md)
+    font-size: 1rem
+    padding: 1.4rem 0
+
 
 
 .label

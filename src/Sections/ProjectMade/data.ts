@@ -6,7 +6,8 @@ export interface dataProjectMadeInterface {
   description: string
   link: string
   tools_used: IdevToolsItem[]
-  img_path: string
+  img_path: string,
+  can_hide?: boolean
 }
 
 export const dataProjectMade: dataProjectMadeInterface[] = [
@@ -63,6 +64,17 @@ export const dataProjectMade: dataProjectMadeInterface[] = [
     img_path: `https://images.unsplash.com/photo-1560472354-0088b5dc9d8d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1130&q=80`
   },
   {
+    title: `Incopens`,
+    subtitle: ``,
+    description: `description`,
+    link: ``,
+    tools_used: [
+      dev_tools.languages.cpp,
+    ],
+    img_path: `https://images.unsplash.com/photo-1560472354-0088b5dc9d8d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1130&q=80`,
+    can_hide: true
+  },
+  {
     title: `Java File Manage ( CMD )`,
     subtitle: ``,
     description: `description`,
@@ -70,7 +82,8 @@ export const dataProjectMade: dataProjectMadeInterface[] = [
     tools_used: [
       dev_tools.languages.cpp,
     ],
-    img_path: `https://images.unsplash.com/photo-1560472354-0088b5dc9d8d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1130&q=80`
+    img_path: `https://images.unsplash.com/photo-1560472354-0088b5dc9d8d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1130&q=80`,
+    can_hide: true,
   },
   {
     title: `Dormitory System ( CMD )`,

@@ -4,10 +4,25 @@
   padding-top: 8rem
 
 
+  @media (max-width: $media-lg)
+    padding-top: 6rem
+
+
 .project-made-content
   margin-top: 2.6rem
   display: grid
   grid-template-columns: repeat(4, 1fr)
   grid-template-rows: auto
-  gap: 1rem 0.8rem
+  gap: 1rem
 
+
+  @media (max-width: $media-2xl)
+    grid-template-columns: repeat(3, 1fr)
+    gap: 0.8rem
+
+  
+  @media (max-width: $media-lg)
+    grid-template-columns: repeat(2, 1fr)
+
+  @media (max-width: $media-md)
+    grid-template-columns: 1fr
