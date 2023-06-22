@@ -41,12 +41,28 @@ export const dataTimeline: dataTimelineInterface[] = [
     date: {
       start: `April, 2023`,
       end: ``,
-      helper: '1 months',
+      helper: '3 weeks',
     },
     link: `#`,
     tools_used: [
       dev_tools.tools.android_studio,
       dev_tools.languages.kotlin,
+    ],
+  },
+  {
+    title: `ITuy ( WebApp )`,
+    subtitle: `( Fullstack  |  project to facilitate work in university )`,
+    description: `Web app for the field of IT that I am currently studying. made to facilitate the collection of money or suggest different places, including various features in the future that are going to happen`,
+    date: {
+      start: `April, 2023`,
+      end: `Feb, 2023`,
+      helper: '3 months',
+    },
+    link: `#`,
+    tools_used: [
+      dev_tools.languages.php,
+      dev_tools.tools.tailwind_css,
+      dev_tools.tools.mysql
     ],
   },
   {
@@ -84,22 +100,6 @@ export const dataTimeline: dataTimelineInterface[] = [
       dev_tools.languages.nodejs,
       dev_tools.languages.vue,
       dev_tools.tools.tailwind_css,
-    ],
-  },
-  {
-    title: `Dormitory System ( WebApp )`,
-    subtitle: `( Fullstack  |  project in university subjects )`,
-    description: `Charity project for student dormitory Increase convenience for students to use the booking website`,
-    date: {
-      start: `Jun, 2022`,
-      end: `Apr, 2022`,
-      helper: '3 months',
-    },
-    link: `#`,
-    tools_used: [
-      dev_tools.languages.php,
-      dev_tools.tools.tailwind_css,
-      dev_tools.tools.mysql
     ],
   },
 ] 

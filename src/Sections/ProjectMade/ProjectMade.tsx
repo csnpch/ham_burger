@@ -5,7 +5,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { links } from '@/data/link';
 import CardProject from './components/CardProject';
 import Topic from "@/components/Topic/Topic";
-import { media_2xl, media_3xl, media_lg, media_md } from '@/utils/functions/mediaQuery';
+import { media_2xl, media_3xl, media_lg, media_over } from '@/utils/functions/mediaQuery';
 
 
 export default function ProjectMade() {
@@ -13,7 +13,7 @@ export default function ProjectMade() {
   const is3xl = media_3xl()
   const is2xl = media_2xl()
   const isLg = media_lg()
-  const isMd = media_md()
+  const isOver = media_over()
 
   let countCanHide = {
     xl3: 0,
@@ -24,7 +24,7 @@ export default function ProjectMade() {
 
   const ListItemProjectMade = dataProjectMade.map((item, index) => {
     
-    if (is3xl && !is2xl && item.can_hide && countCanHide.xl3++ < 1) {
+    if ((is3xl || isOver) && !is2xl && item.can_hide && countCanHide.xl3++ < 1) {
       countCanHide.xl3++
       return null
     } else if (isLg && item.can_hide && countCanHide.xl2++ < 1) {

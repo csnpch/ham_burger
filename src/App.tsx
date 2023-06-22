@@ -7,6 +7,7 @@ import Hero from './Sections/Hero/Hero'
 import Education from './Sections/Education/Education'
 import Experience from './Sections/Experience/Experience'
 import ProjectMade from './Sections/ProjectMade/ProjectMade'
+import Skill from './Sections/Skill/Skill'
 
 
 
@@ -21,17 +22,14 @@ function App() {
         <Navbar />
         <Hero />
 
-        <ContainerBase>
+        <ContainerBase
+          className={`pb-10`}
+        >
 
           <Education />
           <Experience />
           <ProjectMade />
-          
-          {
-            [0,1,2,3,4,5,6,7,8,9,1,2,3,4].map(item => (
-              <br key={item} />
-            ))
-          }
+          <Skill />
           
         </ContainerBase>
 

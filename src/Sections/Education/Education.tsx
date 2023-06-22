@@ -6,11 +6,13 @@ import Topic from '@/components/Topic/Topic'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 import CardEducation from './components/CardEducation'
+import { media_md } from '@/utils/functions/mediaQuery'
 
 
 
 export default function Education() {
 
+  const isMd = media_md()
 
   const ListItemEducation = dataEducation.map((item, index) => (
     <CardEducation 
@@ -41,8 +43,12 @@ export default function Education() {
               title={`MY EDUCATION`}
               subTitle={`Education Is Not The Learning Of Facts, But The Training Of The Mind To Think.`}
               classes={{
-                title: 'justify-center',
-                subTitle: 'text-center'
+                title: _class(`
+                  ${!isMd && 'justify-center'}
+                `),
+                subTitle: _class(`
+                  ${!isMd && 'text-center'}
+                `)
               }}
             />
 

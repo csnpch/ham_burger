@@ -10,7 +10,8 @@ interface propsInterface {
   classes?: {
     container?: string,
     title?: string,
-    subTitle?: string
+    subTitle?: string,
+    icon?: string,
   }
 }
 
@@ -29,8 +30,13 @@ export default function Topic(props: propsInterface) {
           title 
           ${props.classes?.title || ''}
         `)}>
-        
-          { props.icon || <></>}
+          
+          {
+            props.icon &&
+            <div className={_class(`${props.classes?.icon}`)}>
+              { props.icon }
+            </div>
+          }
           <p>
             { props.title }
           </p>
