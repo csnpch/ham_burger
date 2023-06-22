@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTerminal } from '@fortawesome/free-solid-svg-icons'
 import CardGroupItemSkill from './Components/CardGroupItemSkill'
 import { mySkills } from './data'
+import Reveal from '@/components/Animation/Reveal'
 
 
 export default function Skill() {
@@ -12,26 +13,37 @@ export default function Skill() {
     
       <section className={`container-skill`}>
 
-        <Topic 
-          title='skills & abilities'
-          subTitle='Skills may not be covered, But I never stop learning.'
-          icon={<FontAwesomeIcon icon={faTerminal} />}
-          classes={{
-            icon: 'custom-icon-skill',
-          }}
-        />
+        <Reveal>
+          <Topic
+            title='skills & abilities'
+            subTitle='Skills may not be covered, But I never stop learning.'
+            icon={<FontAwesomeIcon icon={faTerminal} />}
+            classes={{
+              icon: 'custom-icon-skill',
+            }}
+          />
+        </Reveal>
 
-        <div className={`skill-content-contaner`}>
-          <CardGroupItemSkill
-            data={mySkills.languages}
-          />
-          <CardGroupItemSkill
-            data={mySkills.frameworks}
-          />
-          <CardGroupItemSkill
-            data={mySkills.tools}
-          />
-        </div>
+        <Reveal>
+          <div className={`skill-content-contaner`}>
+            <Reveal>
+              <CardGroupItemSkill
+                data={mySkills.languages}
+              />
+            </Reveal>
+            <Reveal>
+              <CardGroupItemSkill
+                data={mySkills.frameworks}
+              />
+            </Reveal>
+            <Reveal>
+              <CardGroupItemSkill
+                data={mySkills.tools}
+              />
+            </Reveal>
+          </div>
+        </Reveal>
+
         
       </section>
     

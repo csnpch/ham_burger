@@ -2,6 +2,7 @@ import './CardGroupItemSkill.sass'
 import { itemSkillInterface } from '../data'
 import { IdevToolsItem } from '@/data/dev_tools'
 import ScrollContainer from 'react-indiana-drag-scroll'
+import Reveal from '@/components/Animation/Reveal'
 
 
 interface propsInterface {
@@ -39,43 +40,49 @@ export default function CardGroupItemSkill(props: propsInterface) {
         <div className={`group-skills`}>
         {
             props.data.basic.length !== 0 &&
-            <div className={`level basic`}>
-              <p className={`label`}>
-                Basic
-              </p>
-              <div className={`group-wrapper`}>
-                <ScrollContainer className="scroll-container list-item-wrapper">
-                  { getSkills(props.data.basic) }
-                </ScrollContainer>
+            <Reveal>
+              <div className={`level basic`}>
+                <p className={`label`}>
+                  Basic
+                </p>
+                <div className={`group-wrapper`}>
+                  <ScrollContainer className="scroll-container list-item-wrapper">
+                    { getSkills(props.data.basic) }
+                  </ScrollContainer>
+                </div>
               </div>
-            </div>
+            </Reveal>
           }
           {
             props.data.intermediate.length !== 0 &&
-            <div className={`level intermediate`}>
-              <p className={`label`}>
-                Intermediate
-              </p>
-              <div className={`group-wrapper`}>
-                <ScrollContainer className="scroll-container list-item-wrapper">
-                  { getSkills(props.data.intermediate) }
-                </ScrollContainer>
+            <Reveal>
+              <div className={`level intermediate`}>
+                <p className={`label`}>
+                  Intermediate
+                </p>
+                <div className={`group-wrapper`}>
+                  <ScrollContainer className="scroll-container list-item-wrapper">
+                    { getSkills(props.data.intermediate) }
+                  </ScrollContainer>
+                </div>
               </div>
-            </div>
+            </Reveal>
           }
           
           {
             props.data.expert.length !== 0 &&
-            <div className={`level expert`}>
-              <p className={`label`}>
-                Expert
-              </p>
-              <div className={`group-wrapper`}>
-                <ScrollContainer className="scroll-container list-item-wrapper">
-                  { getSkills(props.data.expert) }
-                </ScrollContainer>
+            <Reveal>
+              <div className={`level expert`}>
+                <p className={`label`}>
+                  Expert
+                </p>
+                <div className={`group-wrapper`}>
+                  <ScrollContainer className="scroll-container list-item-wrapper">
+                    { getSkills(props.data.expert) }
+                  </ScrollContainer>
+                </div>
               </div>
-            </div>
+            </Reveal>
           }
         </div>
       </div>

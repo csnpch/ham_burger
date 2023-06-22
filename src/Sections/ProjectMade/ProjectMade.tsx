@@ -1,11 +1,14 @@
 import './ProjectMade.sass'
-import { dataProjectMade } from './data';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { links } from '@/data/link';
-import CardProject from './components/CardProject';
-import Topic from "@/components/Topic/Topic";
-import { media_2xl, media_3xl, media_lg, media_over } from '@/utils/functions/mediaQuery';
+import { dataProjectMade } from './data'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { links } from '@/data/link'
+import CardProject from './components/CardProject'
+import Topic from "@/components/Topic/Topic"
+import { media_2xl, media_3xl, media_lg, media_over } from '@/utils/functions/mediaQuery'
+import Reveal from '@/components/Animation/Reveal'
+import { configStepFadeIn } from '@/utils/framerMotion'
+import { motion } from 'framer-motion'
 
 
 export default function ProjectMade() {
@@ -33,10 +36,16 @@ export default function ProjectMade() {
     }
 
     return (
-      <CardProject 
-        key={index}
-        data={item}
-      />
+      <Reveal
+        properties={{
+          delay: 0.4,
+        }}
+      >
+        <CardProject 
+          key={index}
+          data={item}
+        />
+      </Reveal>
     )
   })
 
@@ -45,28 +54,45 @@ export default function ProjectMade() {
     
       <section className="project-made-container">
 
-        <Topic
-          title={`OTHER PROJECTS MADE`} 
-          subTitle={`I like to create things that benefit the public the most.`}
-        />
+        <Reveal>
+          <Topic
+            title={`OTHER PROJECTS MADE`} 
+            subTitle={`I like to create things that benefit the public the most.`}
+          />
+        </Reveal>
 
-        <div className="project-made-content">
-          { ListItemProjectMade }
-
-          <a
-            href={links.github_profile.source} 
-            target='_blank'
-            className={`view-more`}
+        <Reveal>
+          <motion.ul
+              className="container_card_navigator lg:mt-4"
+              variants={configStepFadeIn.container}
+              initial="hidden"
+              animate="visible"
           >
-            <p className='label'>
-              View more
-            </p>
-            <FontAwesomeIcon 
-              className='icon' 
-              icon={faArrowRight} 
-            />
-          </a>
-        </div>
+            <div className="project-made-content">
+              { ListItemProjectMade }
+
+              <motion.li 
+                variants={configStepFadeIn.item}
+                className={`wh-full`}
+              >
+                <a
+                  href={links.github_profile.source} 
+                  target='_blank'
+                  className={`view-more h-full`}
+                >
+                  <p className='label'>
+                    View more
+                  </p>
+                  <FontAwesomeIcon 
+                    className='icon' 
+                    icon={faArrowRight} 
+                  />
+                </a>
+              </motion.li>
+              
+            </div>
+          </motion.ul>
+        </Reveal>
       
       </section>
     

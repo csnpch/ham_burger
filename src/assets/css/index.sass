@@ -1,5 +1,6 @@
 @use './reset' as *
 @use './properties' as *
+@use './animation' as *
 @use './variables' as *
 @import 'https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Lacquer&display=swap'
 
@@ -8,15 +9,18 @@ body
   background-color: $bg-primary
   color: $color-primary
 
+
 .container
   width: 100%
   height: 100%
   margin: 0 auto
 
+
 .container-base
   width: $base-width
   margin: 0 auto
   max-width: $max-width
+  
   
 // Custom scrollbar
 body::-webkit-scrollbar

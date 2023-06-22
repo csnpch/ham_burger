@@ -9,6 +9,7 @@ import { _class } from '@/utils/functions/helper'
 import CardExperience from './components/CardExperience'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFigma } from '@fortawesome/free-brands-svg-icons'
+import Reveal from '@/components/Animation/Reveal'
 
 
 interface propsInterface {}
@@ -17,16 +18,22 @@ interface propsInterface {}
 export default function Experience({}: propsInterface) {
 
   const ListItemExperience = dataTimeline.map((item, index) => (
-    <CardExperience 
-      key={index}
-      data={item}
-      classes={{
-        title: _class(`${index === 0 && 'color-secondary'}`),
-        timeline: {
-          date_start: _class(`${index === 0 && 'color-secondary'}`),
-        }
+    <Reveal
+      properties={{
+        duration: 0.6
       }}
-    />
+    >
+      <CardExperience 
+        key={index}
+        data={item}
+        classes={{
+          title: _class(`${index === 0 && 'color-secondary'}`),
+          timeline: {
+            date_start: _class(`${index === 0 && 'color-secondary'}`),
+          }
+        }}
+      />
+    </Reveal>
   ))
 
   
@@ -38,11 +45,18 @@ export default function Experience({}: propsInterface) {
         {/* right or bottom content */}
         <div className={`exp-content-container`}>
 
-          <Topic
-            icon={<FontAwesomeIcon icon={faFigma} />}
-            title={`EXPERIENCE`}
-            subTitle={`Experience may be minimal but definitely full of heart.`}
-          />
+          <Reveal
+            properties={{
+              duration: 0.6
+            }}
+          >
+            <Topic
+              icon={<FontAwesomeIcon icon={faFigma} />}
+              title={`EXPERIENCE`}
+              subTitle={`Experience may be minimal but definitely full of heart.`}
+            />
+          </Reveal>
+     
 
           <div className={`timeline-container`}>
             
