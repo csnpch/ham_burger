@@ -10,13 +10,14 @@ import ProjectMade from './Sections/ProjectMade/ProjectMade'
 import Skill from './Sections/Skill/Skill'
 
 
+
 function App() {
 
   document.title = 'Ham, Burger'
 
   return (
     <>
-
+    
       <LayoutMain>
 
         <Navbar />

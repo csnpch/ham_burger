@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <>
 
-        <section className={`hero-container`}>
+        <section id='hero' className={`hero-container`}>
 
           <ContainerBase className={`container-base`} >
 

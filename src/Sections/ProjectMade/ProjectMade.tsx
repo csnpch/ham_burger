@@ -37,12 +37,12 @@ export default function ProjectMade() {
 
     return (
       <Reveal
+        key={index}
         properties={{
           delay: 0.4,
         }}
       >
         <CardProject 
-          key={index}
           data={item}
         />
       </Reveal>
@@ -52,7 +52,7 @@ export default function ProjectMade() {
   return (
     <>
     
-      <section className="project-made-container">
+      <section id='project-made' className="project-made-container">
 
         <Reveal>
           <Topic

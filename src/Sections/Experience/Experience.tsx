@@ -19,12 +19,12 @@ export default function Experience({}: propsInterface) {
 
   const ListItemExperience = dataTimeline.map((item, index) => (
     <Reveal
+      key={index}
       properties={{
         duration: 0.6
       }}
     >
       <CardExperience 
-        key={index}
         data={item}
         classes={{
           title: _class(`${index === 0 && 'color-secondary'}`),
@@ -40,7 +40,7 @@ export default function Experience({}: propsInterface) {
   return (
     <>
    
-      <section className={`experience-container`}>
+      <section id='experience' className={`experience-container`}>
         
         {/* right or bottom content */}
         <div className={`exp-content-container`}>

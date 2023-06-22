@@ -18,13 +18,13 @@ export default function Education() {
 
   const ListItemEducation = dataEducation.map((item, index) => (
     <Reveal 
+      key={index}
       className='w-full'
       properties={{
         duration: 0.6
       }}
     >
       <CardEducation 
-        key={index}
         data={item}
         classes={{
           timeline: `${index === 0 && 'color-secondary'}`,
@@ -38,7 +38,7 @@ export default function Education() {
   return (
     <>
 
-      <section className={`education-container`}>
+      <section id='education' className={`education-container`}>
         
           {/* left or top content */}
           <div className={`banner-img fade-in-left`}>

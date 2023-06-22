@@ -56,7 +56,6 @@ export default function Navbar() {
   }, [menu_context.onMenu])
 
 
-
   return (
     <>
       <nav className={`navbar-container`}>

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { MenuContext } from '@/data/context/menuContext'
 import { menuSlug } from '@/interface/type'
 
@@ -14,6 +14,48 @@ export default function LayoutMain({
 
   const [onMenu, setOnMenu] = useState<menuSlug>('home')
   const [burgerMenu, setBurgerMenu] = useState<boolean>(false)
+  const ref = useRef(null)
+
+
+  const scrollTo = (section: HTMLElement | null) => {
+    window.scrollTo({
+      top: section?.offsetTop,
+      left: 0,
+      behavior: 'smooth'
+    })
+  }
+
+  const scrollToSection = (slug: menuSlug) => {
+  
+    if (!ref.current) return
+    
+    const sections = {
+      hero: document.getElementById('hero'),
+      education: document.getElementById('education'),
+      experience: document.getElementById('experience'),
+      projectMade: document.getElementById('project-made'),
+      skill: document.getElementById('skill'),
+    }
+    
+    if (slug === 'home')
+      scrollTo(sections.hero)
+    else if (slug === 'education')
+      scrollTo(sections.education)
+    else if (slug === 'experience')
+      scrollTo(sections.experience)
+    else if (slug === 'projects')
+      scrollTo(sections.projectMade)
+    else if (slug === 'skills')
+      scrollTo(sections.skill)
+
+  }
+
+
+
+  useEffect(() => {
+    scrollToSection(onMenu)
+  }, [onMenu])
+
 
   return (
     <>
@@ -24,7 +66,10 @@ export default function LayoutMain({
         setBurgerMenu: setBurgerMenu
       }}>
 
-        <div className={`container`}>
+        <div 
+          ref={ref}
+          className={`container`}
+        >
           {children}
         </div>
 

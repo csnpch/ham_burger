@@ -11,7 +11,7 @@ export default function Skill() {
   return (
     <>
     
-      <section className={`container-skill`}>
+      <section id='skill' className={`container-skill`}>
 
         <Reveal>
           <Topic
