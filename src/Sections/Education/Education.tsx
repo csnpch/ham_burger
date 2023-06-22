@@ -16,6 +16,7 @@ export default function Education() {
 
   const ListItemEducation = dataEducation.map((item, index) => (
     <CardEducation 
+      key={index}
       data={item}
       classes={{
         timeline: `${index === 0 && 'color-secondary'}`,

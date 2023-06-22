@@ -1,8 +1,9 @@
-import Topic from '@/components/Topic/Topic'
 import './Skill.sass'
+import Topic from '@/components/Topic/Topic'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTerminal } from '@fortawesome/free-solid-svg-icons'
 import CardGroupItemSkill from './Components/CardGroupItemSkill'
+import { mySkills } from './data'
 
 
 export default function Skill() {
@@ -21,7 +22,15 @@ export default function Skill() {
         />
 
         <div className={`skill-content-contaner`}>
-          <CardGroupItemSkill />
+          <CardGroupItemSkill
+            data={mySkills.languages}
+          />
+          <CardGroupItemSkill
+            data={mySkills.frameworks}
+          />
+          <CardGroupItemSkill
+            data={mySkills.tools}
+          />
         </div>
         
       </section>

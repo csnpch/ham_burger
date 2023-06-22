@@ -1,23 +1,38 @@
 import { dev_tools, IdevToolsItem } from "@/data/dev_tools";
 
-interface itemOfMySkills {
+export interface itemSkillInterface {
+  label: string
   basic: IdevToolsItem[]
   intermediate: IdevToolsItem[]
   expert: IdevToolsItem[]
 }
 
-export interface mySkillsInterface {
-  languages: itemOfMySkills
-  frameworks: itemOfMySkills
-  tools: itemOfMySkills
+export interface objectSkillsInterface {
+  languages: itemSkillInterface
+  frameworks: itemSkillInterface
+  tools: itemSkillInterface
 }
 
 
-export const mySkills: mySkillsInterface = {
+export const mySkills: objectSkillsInterface = {
   languages: {
+    label: 'Languages',
     basic: [
     ],
     intermediate: [
+      dev_tools.languages.kotlin,
+      dev_tools.languages.javascript,
+      dev_tools.languages.typescript,
+      // mockup,
+      dev_tools.languages.kotlin,
+      dev_tools.languages.javascript,
+      dev_tools.languages.typescript,
+      dev_tools.languages.kotlin,
+      dev_tools.languages.javascript,
+      dev_tools.languages.typescript,
+      dev_tools.languages.kotlin,
+      dev_tools.languages.javascript,
+      dev_tools.languages.typescript,
       dev_tools.languages.kotlin,
       dev_tools.languages.javascript,
       dev_tools.languages.typescript,
@@ -29,6 +44,7 @@ export const mySkills: mySkillsInterface = {
     ],
   },
   frameworks: {
+    label: 'Frameworks',
     basic: [
     ],
     intermediate: [
@@ -41,6 +57,7 @@ export const mySkills: mySkillsInterface = {
     ],
   },
   tools: {
+    label: 'Tools',
     basic: [
     ],
     intermediate: [
