@@ -20,7 +20,9 @@ export default function CardEducation(props: propsInterface) {
   
   return (
     <>
-      <div 
+      <a
+        href={props.data.link}
+        target="_blank"
         className={`edu-card-item`}
       >
         {/* left */}
@@ -53,7 +55,7 @@ export default function CardEducation(props: propsInterface) {
             { props.data.subtitle }
           </p>
         </div>
-      </div>
+      </a>
     </>
   )
 

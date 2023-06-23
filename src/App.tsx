@@ -8,6 +8,7 @@ import Education from './Sections/Education/Education'
 import Experience from './Sections/Experience/Experience'
 import ProjectMade from './Sections/ProjectMade/ProjectMade'
 import Skill from './Sections/Skill/Skill'
+import Mouse from './components/Animation/Mouse'
 
 
 
@@ -15,8 +16,13 @@ function App() {
 
   document.title = 'Ham, Burger'
 
+
+  
+
   return (
     <>
+
+      <Mouse />
     
       <LayoutMain>
 

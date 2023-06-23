@@ -28,6 +28,9 @@ export default function CardProject(props: propsInterface) {
             <div className={`title`}>
               { props.data.title }
             </div>
+            <div className={`sub-title`}>
+              { props.data.subtitle }
+            </div>
             <div className={`description`}>
               { props.data.description }
             </div>

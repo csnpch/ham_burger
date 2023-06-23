@@ -24,31 +24,31 @@ export const contacts: contactInterface[] = [
   {
     icon: <FontAwesomeIcon icon={faGithub} />,
     label: 'Github',
-    link: ''
+    link: 'https://github.com/csnpch'
   },
   {
     icon: <FontAwesomeIcon icon={faFacebookF} />,
     label: 'Facebook',
-    link: ''
+    link: 'https://fb.com/csnp.ch'
   },
   {
     icon: <FontAwesomeIcon icon={faInstagram} />,
     label: 'Instagram',
-    link: ''
+    link: 'https://www.instagram.com/_csnpch'
   },
   {
     icon: <FontAwesomeIcon icon={faTwitter} />,
     label: 'Twitter',
-    link: ''
+    link: 'https://twitter.com/solasuuu'
   },
   {
     icon: <FontAwesomeIcon icon={faLinkedinIn} />,
     label: 'LinkedIn',
-    link: ''
+    link: 'https://www.linkedin.com/in/chitsanuphong-chaihong-4b3b751bb/'
   },
   {
     icon: <FontAwesomeIcon icon={faEnvelope} />,
     label: 'Email',
-    link: ''
+    link: 'mailto:chitsanuphong.c@outlook.com?'
   }
 ]

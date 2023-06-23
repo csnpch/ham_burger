@@ -24,7 +24,7 @@ export const dataTimeline: dataTimelineInterface[] = [
       end: `May, 2023`,
       helper: '2 months',
     },
-    link: `#`,
+    link: `https://github.com/csnpch/HaiDashboard`,
     tools_used: [
       dev_tools.languages.typescript,
       dev_tools.languages.react,
@@ -43,7 +43,7 @@ export const dataTimeline: dataTimelineInterface[] = [
       end: ``,
       helper: '3 weeks',
     },
-    link: `#`,
+    link: `https://github.com/csnpch/iWant`,
     tools_used: [
       dev_tools.tools.android_studio,
       dev_tools.languages.kotlin,
@@ -58,7 +58,7 @@ export const dataTimeline: dataTimelineInterface[] = [
       end: `Feb, 2023`,
       helper: '3 months',
     },
-    link: `#`,
+    link: `https://github.com/csnpch/ITuy`,
     tools_used: [
       dev_tools.languages.php,
       dev_tools.tools.tailwind_css,
@@ -74,7 +74,7 @@ export const dataTimeline: dataTimelineInterface[] = [
       end: ``,
       helper: '3 weeks',
     },
-    link: `#`,
+    link: `https://github.com/csnpch/queueee`,
     tools_used: [
       dev_tools.languages.javascript,
       dev_tools.languages.nodejs,
@@ -94,7 +94,7 @@ export const dataTimeline: dataTimelineInterface[] = [
       end: ``,
       helper: '1 weeks',
     },
-    link: `#`,
+    link: `https://github.com/csnpch/siblings_matching_activities`,
     tools_used: [
       dev_tools.languages.javascript,
       dev_tools.languages.nodejs,
