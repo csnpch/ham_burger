@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
-import { MenuContext } from '@/data/context/menuContext'
-import { menuSlug } from '@/interface/type'
+import { MenuContext } from '@/common/data/context/menuContext'
+import { menuSlug } from '@/common/interface/type'
 
 
 interface propsInterface {
@@ -50,9 +50,8 @@ export default function LayoutMain({
 
   }
 
-
-
   useEffect(() => {
+    console.log(onMenu)
     scrollToSection(onMenu)
   }, [onMenu])
 

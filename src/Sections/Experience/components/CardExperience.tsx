@@ -1,4 +1,4 @@
-import { _class } from "@/utils/functions/helper"
+import { _class } from "@/common/utils/functions/helper"
 import { dataTimelineInterface } from "../data"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'

@@ -1,4 +1,4 @@
-import { menuSlug } from '@/interface/type';
+import { menuSlug } from '@/common/interface/type';
 import { createContext } from 'react';
 
 export interface MenuContextInterface {

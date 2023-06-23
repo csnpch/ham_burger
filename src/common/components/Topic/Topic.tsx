@@ -1,6 +1,6 @@
 import './Topic.sass'
 
-import { _class } from '@/utils/functions/helper'
+import { _class } from '@/common/utils/functions/helper'
 
 
 interface propsInterface {

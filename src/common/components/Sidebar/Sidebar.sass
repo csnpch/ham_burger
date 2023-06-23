@@ -1,0 +1,25 @@
+@use './../../assets/css/variables' as *
+
+
+
+.sidebar-container
+  position: fixed
+  right: -10rem
+  top: 5rem
+  display: flex
+  flex-direction: column
+  gap: 1rem
+  z-index: 2000
+  transition: all 0.2s ease-in-out
+
+.sidebar-container.active
+  right: 1.6rem
+  top: 5rem
+
+
+.sidebar-container .item
+  padding: 0.6rem 2rem
+  background: #000000
+  opacity: 80%
+  box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.5)
+  border-radius: 2rem 0.2rem 2rem 0.2rem

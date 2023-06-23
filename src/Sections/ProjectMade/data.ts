@@ -1,4 +1,4 @@
-import { IdevToolsItem, dev_tools } from "@/data/dev_tools"
+import { IdevToolsItem, dev_tools } from "@/common/data/dev_tools"
 
 export interface dataProjectMadeInterface {
   title: string

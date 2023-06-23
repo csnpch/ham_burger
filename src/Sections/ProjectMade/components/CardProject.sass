@@ -1,4 +1,4 @@
-@use './../../../assets/css/variables.sass' as *
+@use './../../../common/assets/css/variables.sass' as *
 
 .card-project-container
   position: relative
@@ -109,38 +109,6 @@
   width: 90%
   margin: 0 auto
   font-size: 0.9rem
-
-
-.view-more
-  width: 100%
-  cursor: pointer
-  border: 2px solid #FFFFFF80
-  border-radius: 0.6rem
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: center
-  letter-spacing: 0.06rem
-  font-weight: 500
-  font-size: 1.6rem
-  color: #BCBCBC
-  gap: 0.4rem
-  transition: all 0.2s ease-in-out
-
-  &:hover
-    border: 2px solid #FFFFFF
-    background: #FFFFFF10
-
-    .label
-      transform: scale(1.04)
-    
-    .icon
-      transform: scale(1.04)
-
-  @media (max-width: $media-md)
-    font-size: 1rem
-    padding: 1.4rem 0
-
 
 
 .label

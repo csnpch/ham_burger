@@ -2,12 +2,12 @@ import './ProjectMade.sass'
 import { dataProjectMade } from './data'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
-import { links } from '@/data/link'
+import { links } from '@/common/data/link'
 import CardProject from './components/CardProject'
-import Topic from "@/components/Topic/Topic"
-import { media_2xl, media_3xl, media_lg, media_over } from '@/utils/functions/mediaQuery'
-import Reveal from '@/components/Animation/Reveal'
-import { configStepFadeIn } from '@/utils/framerMotion'
+import Topic from "@/common/components/Topic/Topic"
+import { media_2xl, media_3xl, media_lg, media_over } from '@/common/utils/functions/mediaQuery'
+import Reveal from '@/common/components/Animation/Reveal'
+import { configStepFadeIn } from '@/common/utils/framerMotion'
 import { motion } from 'framer-motion'
 
 
@@ -75,19 +75,21 @@ export default function ProjectMade() {
                 variants={configStepFadeIn.item}
                 className={`wh-full`}
               >
-                <a
-                  href={links.github_profile.source} 
-                  target='_blank'
-                  className={`view-more h-full`}
-                >
-                  <p className='label'>
-                    View more
-                  </p>
-                  <FontAwesomeIcon 
-                    className='icon' 
-                    icon={faArrowRight} 
-                  />
-                </a>
+                <Reveal className='wh-full'>
+                  <a
+                    href={links.github_profile.source} 
+                    target='_blank'
+                    className={`view-more h-full`}
+                  >
+                    <p className='label'>
+                      View more
+                    </p>
+                    <FontAwesomeIcon 
+                      className='icon' 
+                      icon={faArrowRight} 
+                    />
+                  </a>
+                </Reveal>
               </motion.li>
               
             </div>

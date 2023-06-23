@@ -22,7 +22,6 @@ export default function Mouse() {
     const handleMouseMove = (e: MouseEvent) => {
       mouse.current.x = e.x
       mouse.current.y = e.y
-      // change size to big and setTimeout 500ms to default size
       gsap.to(ball, { scale: 1.6, duration: 0.5 })
       setTimeout(() => {
         gsap.to(ball, { scale: 1, duration: 0.5 })

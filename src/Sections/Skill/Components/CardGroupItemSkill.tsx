@@ -1,8 +1,9 @@
 import './CardGroupItemSkill.sass'
 import { itemSkillInterface } from '../data'
-import { IdevToolsItem } from '@/data/dev_tools'
+import { IdevToolsItem } from '@/common/data/dev_tools'
 import ScrollContainer from 'react-indiana-drag-scroll'
-import Reveal from '@/components/Animation/Reveal'
+import Reveal from '@/common/components/Animation/Reveal'
+import { media_md } from '@/common/utils/functions/mediaQuery'
 
 
 interface propsInterface {
@@ -12,21 +13,41 @@ interface propsInterface {
 
 export default function CardGroupItemSkill(props: propsInterface) {
 
+
+  const isMd = media_md()
+
   
   const getSkills = (data: IdevToolsItem[]) => {
-    return data.map((item, index) => {
-      return (
-        <div 
-          key={index}
-          className={`item-skill`}
-        >
-          <img src={item.source} alt="#" />
-          <p className={`item-label`}>
-            { item.label }
-          </p>
-        </div>
-      )
-    })
+    return (
+      <ScrollContainer 
+        className={`
+          scroll-container 
+          list-item-wrapper
+          ${isMd ? 'overflow-hidden' : ''}
+        `}
+      >
+        {
+          data.map((item, index) => (
+            <Reveal
+              key={index}
+              properties={{
+                y: 1
+              }}
+            >
+              <div 
+                key={index}
+                className={`item-skill`}
+              >
+                <img src={item.source} alt="#" />
+                <p className={`item-label`}>
+                  { item.label }
+                </p>
+              </div>
+            </Reveal>
+          ))
+        }
+      </ScrollContainer>
+    )
   }
 
 
@@ -46,9 +67,7 @@ export default function CardGroupItemSkill(props: propsInterface) {
                   Basic
                 </p>
                 <div className={`group-wrapper`}>
-                  <ScrollContainer className="scroll-container list-item-wrapper">
-                    { getSkills(props.data.basic) }
-                  </ScrollContainer>
+                  { getSkills(props.data.basic) }
                 </div>
               </div>
             </Reveal>
@@ -61,9 +80,7 @@ export default function CardGroupItemSkill(props: propsInterface) {
                   Intermediate
                 </p>
                 <div className={`group-wrapper`}>
-                  <ScrollContainer className="scroll-container list-item-wrapper">
-                    { getSkills(props.data.intermediate) }
-                  </ScrollContainer>
+                  { getSkills(props.data.intermediate) }  
                 </div>
               </div>
             </Reveal>
@@ -77,9 +94,7 @@ export default function CardGroupItemSkill(props: propsInterface) {
                   Expert
                 </p>
                 <div className={`group-wrapper`}>
-                  <ScrollContainer className="scroll-container list-item-wrapper">
-                    { getSkills(props.data.expert) }
-                  </ScrollContainer>
+                  { getSkills(props.data.expert) }  
                 </div>
               </div>
             </Reveal>

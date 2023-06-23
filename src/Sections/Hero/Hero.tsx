@@ -1,9 +1,10 @@
 import './Hero.sass'
-import ProfileImg from '@/assets/img/profile.png'
+import ProfileImg from '@/common/assets/img/profile.png'
 import { contacts } from './data'
-import ContainerBase from '@/components/Layout/ContainerBase'
-import Reveal from '@/components/Animation/Reveal'
-import { media_md } from '@/utils/functions/mediaQuery'
+import ContainerBase from '@/common/components/Layout/ContainerBase'
+import Reveal from '@/common/components/Animation/Reveal'
+import { media_md } from '@/common/utils/functions/mediaQuery'
+import SlideFade from '@/common/components/Animation/SlideFade'
 
 export default function Hero() {
 
@@ -19,41 +20,59 @@ export default function Hero() {
             {/* left content */}
             <div className={`paragraph-container`}>
                 
-              <Reveal>
+              <Reveal
+                properties={{
+                  y: 1
+                }}
+              >
                 <div className={`identify`}>
-                  <p>I’m</p>
-                  <div className={`fullname`}>
-                    <p>Chitsanuphong</p>
-                    <p>Chaihong</p>
-                  </div>
+                  <SlideFade>
+                    <p>I’m</p>
+                  </SlideFade>
+                  <SlideFade>
+                    <div className={`fullname`}>
+                      <p>Chitsanuphong</p>
+                      <p>Chaihong</p>
+                    </div>
+                  </SlideFade>
                 </div>
               </Reveal>
 
-              <Reveal>
+              <Reveal
+                properties={{
+                  y: 1
+                }}
+              >
                 <div className={`description`}>
-                  <p className={`ideal`}>
-                    Although I may take a bit longer to grasp new concepts, 
-                    I am extremely passionate about enhancing my coding skills 
-                    and creating applications and websites. I'm always eager to 
-                    learn and won't disappoint you. :)
-                  </p>
-                  <p className={`text-highlight`}>
-                    # I'm studying in my final year of bachelor's degree
-                  </p>
-                  <div className={`contact-group`}>
-                    {
-                      contacts.map((contact, index) => (
-                        <a 
-                          key={index} 
-                          href={contact.link} 
-                          target={`_blank`}
-                          className={`contact-item`} 
-                        >
-                          { contact.icon }
-                        </a>
-                      ))
-                    }
-                  </div>
+                  <SlideFade>
+                    <p className={`ideal`}>
+                      Although I may take a bit longer to grasp new concepts, 
+                      I am extremely passionate about enhancing my coding skills 
+                      and creating applications and websites. I'm always eager to 
+                      learn and won't disappoint you. :)
+                    </p>
+                  </SlideFade>
+                  <SlideFade>
+                    <p className={`text-highlight`}>
+                      # I'm studying in my final year of bachelor's degree
+                    </p>
+                  </SlideFade>
+                  <SlideFade>
+                    <div className={`contact-group`}>
+                      {
+                        contacts.map((contact, index) => (
+                          <a 
+                            key={index} 
+                            href={contact.link} 
+                            target={`_blank`}
+                            className={`contact-item`} 
+                          >
+                            { contact.icon }
+                          </a>
+                        ))
+                      }
+                    </div>
+                  </SlideFade>
                 </div>
               </Reveal>
 

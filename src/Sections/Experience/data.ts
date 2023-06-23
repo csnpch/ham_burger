@@ -1,4 +1,4 @@
-import { IdevToolsItem, dev_tools } from "@/data/dev_tools"
+import { IdevToolsItem, dev_tools } from "@/common/data/dev_tools"
 
 export interface dataTimelineInterface {
   title: string
@@ -66,7 +66,7 @@ export const dataTimeline: dataTimelineInterface[] = [
     ],
   },
   {
-    title: `Queueee ( Realtime WebApp )`,
+    title: `Queuee ( Realtime WebApp )`,
     subtitle: `( Fullstack  |  cooperate with the department of lands )`,
     description: `Realtime queue service on local network & local machine, Charitable project for government agencies, Department of Lands, Prachinburi Province, Thailand`,
     date: {
@@ -100,6 +100,21 @@ export const dataTimeline: dataTimelineInterface[] = [
       dev_tools.languages.nodejs,
       dev_tools.languages.vue,
       dev_tools.tools.tailwind_css,
+    ],
+  },
+  {
+    title: `QA Tester ( Automation )`,
+    subtitle: `( Intership 2 months at Siam Commercial Bank )`,
+    description: `Automation testing for bank's teller machine employee services, use Python, Selenium, Robot framework, Postman, etc...`,
+    date: {
+      start: `April, 2023`,
+      end: ``,
+      helper: '3 weeks',
+    },
+    link: `https://github.com/csnpch/iWant`,
+    tools_used: [
+      dev_tools.tools.android_studio,
+      dev_tools.languages.kotlin,
     ],
   },
 ] 

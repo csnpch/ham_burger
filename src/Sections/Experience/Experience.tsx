@@ -2,14 +2,14 @@ import './Experience.sass'
 import './components/CardExperience.sass'
 import './components/ContentHover.sass'
 
-import Topic from '@/components/Topic/Topic'
-import ExperienceBanner from '@/assets/img/experience_banner.svg'
+import Topic from '@/common/components/Topic/Topic'
+import ExperienceBanner from '@/common/assets/img/experience_banner.svg'
 import { dataTimeline } from './data'
-import { _class } from '@/utils/functions/helper'
+import { _class } from '@/common/utils/functions/helper'
 import CardExperience from './components/CardExperience'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFigma } from '@fortawesome/free-brands-svg-icons'
-import Reveal from '@/components/Animation/Reveal'
+import Reveal from '@/common/components/Animation/Reveal'
 
 
 interface propsInterface {}

@@ -1,10 +1,10 @@
 import './Skill.sass'
-import Topic from '@/components/Topic/Topic'
+import Topic from '@/common/components/Topic/Topic'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTerminal } from '@fortawesome/free-solid-svg-icons'
 import CardGroupItemSkill from './Components/CardGroupItemSkill'
 import { mySkills } from './data'
-import Reveal from '@/components/Animation/Reveal'
+import Reveal from '@/common/components/Animation/Reveal'
 
 
 export default function Skill() {

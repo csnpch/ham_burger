@@ -1,15 +1,15 @@
 import './Education.sass'
-import EduBanner from '@/assets/img/education_banner.svg'
+import EduBanner from '@/common/assets/img/education_banner.svg'
 import { dataEducation } from './data'
-import { _class } from '@/utils/functions/helper'
-import Topic from '@/components/Topic/Topic'
+import { _class } from '@/common/utils/functions/helper'
+import Topic from '@/common/components/Topic/Topic'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 import CardEducation from './components/CardEducation'
-import { media_md } from '@/utils/functions/mediaQuery'
-import Reveal from '@/components/Animation/Reveal'
+import { media_md } from '@/common/utils/functions/mediaQuery'
+import Reveal from '@/common/components/Animation/Reveal'
 import { motion } from 'framer-motion'
-import { configStepFadeIn } from '@/utils/framerMotion'
+import { configStepFadeIn } from '@/common/utils/framerMotion'
 
 
 export default function Education() {

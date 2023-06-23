@@ -1,4 +1,4 @@
-import { IdevToolsItem } from '@/data/dev_tools'
+import { IdevToolsItem } from '@/common/data/dev_tools'
 
 interface propsInterface {
   toolsUsed: IdevToolsItem[]

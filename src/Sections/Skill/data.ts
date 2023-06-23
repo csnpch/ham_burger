@@ -1,4 +1,4 @@
-import { dev_tools, IdevToolsItem } from "@/data/dev_tools";
+import { dev_tools, IdevToolsItem } from "@/common/data/dev_tools";
 
 export interface itemSkillInterface {
   label: string
