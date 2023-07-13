@@ -51,7 +51,6 @@ export default function LayoutMain({
   }
 
   useEffect(() => {
-    console.log(onMenu)
     scrollToSection(onMenu)
   }, [onMenu])
 

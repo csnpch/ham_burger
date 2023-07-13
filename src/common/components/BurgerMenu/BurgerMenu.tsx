@@ -1,5 +1,5 @@
-import { MenuContext } from '@/common/data/context/menuContext';
 import './BurgerMenu.sass'
+import { MenuContext } from '@/common/data/context/menuContext';
 import { useRef, useContext } from "react";
 import { _class } from '@/common/utils/functions/helper';
 

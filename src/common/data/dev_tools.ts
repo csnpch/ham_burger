@@ -9,7 +9,15 @@ import nextjs from '@/common/assets/icon/dev_tools/nextjs.svg'
 import php from '@/common/assets/icon/dev_tools/php.png'
 import python from '@/common/assets/icon/dev_tools/python.png'
 import vue from '@/common/assets/icon/dev_tools/vue.png'
+import robot_framework from '@/common/assets/icon/dev_tools/robot_framework.png'
+import css from '@/common/assets/icon/dev_tools/css.webp'
+import sass from '@/common/assets/icon/dev_tools/sass.png'
+import golang from '@/common/assets/icon/dev_tools/golang.png'
+import svelte from '@/common/assets/icon/dev_tools/svelte.png'
+import java from '@/common/assets/icon/dev_tools/java.png'
+import postgreSQL from '@/common/assets/icon/dev_tools/postgreSQL.png'
 // tools
+import netlify from '@/common/assets/icon/dev_tools/netlify.png'
 import socket_io from '@/common/assets/icon/dev_tools/socket_io.png'
 import android_studio from '@/common/assets/icon/dev_tools/android_studio.png'
 import mongodb from '@/common/assets/icon/dev_tools/mongodb.svg'
@@ -17,10 +25,15 @@ import mantine_ui from '@/common/assets/icon/dev_tools/mantine_ui.png'
 import antd from '@/common/assets/icon/dev_tools/antd.svg'
 import mysql from '@/common/assets/icon/dev_tools/mysql.png'
 import redux from '@/common/assets/icon/dev_tools/redux.svg'
-import robot_framework from '@/common/assets/icon/dev_tools/robot_framework.png'
 import selenium from '@/common/assets/icon/dev_tools/selenium.png'
 import tailwind_css from '@/common/assets/icon/dev_tools/tailwind_css.svg'
 import vite from '@/common/assets/icon/dev_tools/vite.png'
+import mui from '@/common/assets/icon/dev_tools/mui.png'
+import firebase from '@/common/assets/icon/dev_tools/firebase.png'
+import gitlab from '@/common/assets/icon/dev_tools/gitlab.png'
+import flutter from '@/common/assets/icon/dev_tools/flutter.webp'
+import dart from '@/common/assets/icon/dev_tools/dart.png'
+import docker from '@/common/assets/icon/dev_tools/docker.png'
 
 
 export interface IdevToolsItem {
@@ -31,6 +44,34 @@ export interface IdevToolsItem {
 
 export const dev_tools = {
   languages: {
+    java: {
+      label: 'Java',
+      source: java
+    },
+    svelte: {
+      label: 'Svelte',
+      source: svelte
+    },
+    golang: {
+      label: 'Golang',
+      source: golang
+    },
+    dart: {
+      label: 'Dart',
+      source: dart
+    },
+    flutter: {
+      label: 'Flutter',
+      source: flutter
+    },
+    css: {
+      label: 'CSS',
+      source: css
+    },
+    sass: {
+      label: 'Sass',
+      source: sass
+    },
     typescript: {
       label: 'TypeScript',
       source: typescript
@@ -71,8 +112,32 @@ export const dev_tools = {
       label: 'Vue.js',
       source: vue
     },
+    robot_framework: {
+      label: 'Robot Framework',
+      source: robot_framework
+    },
   },
   tools: {
+    docker: {
+      label: 'Docker',
+      source: docker
+    },
+    postgreSQL: {
+      label: 'postgreSQL',
+      source: postgreSQL
+    },
+    gitlab: {
+      label: 'GitLab CI/CD',
+      source: gitlab
+    },
+    firebase: {
+      label: 'Firebase',
+      source: firebase
+    },
+    mui: {
+      label: 'Material UI',
+      source: mui
+    },
     socket_io: {
       label: 'Socket.io',
       source: socket_io
@@ -105,10 +170,6 @@ export const dev_tools = {
       label: 'Redux',
       source: redux
     },
-    robot_framework: {
-      label: 'Robot Framework',
-      source: robot_framework
-    },
     selenium: {
       label: 'Selenium',
       source: selenium
@@ -116,6 +177,10 @@ export const dev_tools = {
     tailwind_css: {
       label: 'Tailwind CSS',
       source: tailwind_css
+    },
+    netlify: {
+      label: 'Netlify',
+      source: netlify
     },
   }
 }
