@@ -1,0 +1,58 @@
+@use './../../common/assets/css/variables.sass' as *
+
+
+.experience-container
+  width: 100%
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: flex-start
+  column-gap: 10rem
+  padding-top: 8rem
+
+  @media (max-width: $media-2xl)
+    row-gap: 9rem
+
+
+  @media (max-width: $media-lg)
+    flex-direction: column-reverse
+    row-gap: 6.4rem
+    padding-top: 0rem
+    margin-top: -2rem
+
+
+.experience-container .banner-img
+  width: 100%
+  overflow: hidden
+  top: 15%
+  padding-bottom: 8rem
+  transform: translateY(25%)
+  position: sticky
+
+  @media (max-width: $media-lg)
+    position: relative
+    display: flex
+    justify-content: center
+    padding-bottom: 0
+
+
+.experience-container .banner-img img
+  width: 68%
+
+  @media (max-width: $media-2xl)
+    width: 80%
+
+
+.exp-content-container
+  width: 100%
+  display: flex
+  flex-direction: column
+  gap: 3.2rem
+
+  @media (max-width: $media-lg)
+    gap: 2.4rem
+
+
+.exp-content-container .timeline-container
+  width: 100%
+  height: 100%  

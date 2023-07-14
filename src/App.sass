@@ -1,5 +1,70 @@
-@use './assets/css/variables' as *
+@use './common/assets/css/variables.sass' as *
+
+
+@keyframes fadeInDestroy
+  0%
+    opacity: 1
+  100%
+    opacity: 0
+    visibility: hidden
+
+
 
 body
-    background-color: $bg-primary
-    color: white
+  background-color: $bg-primary
+  color: white
+  overflow-x: hidden
+
+  &::after
+    content: ''
+    position: fixed
+    top: 0
+    left: 0
+    background: #FFF
+    z-index: 9999
+    width: 100vw
+    height: 100vh
+    animation: fadeInDestroy 1s forwards
+
+
+
+.arrow-up
+  cursor: pointer
+  position: fixed
+  padding: 0.6rem
+  border-radius: 50%
+  z-index: 2000
+  border: 2px solid #FFFFFF60
+  visibility: hidden
+  right: 4rem
+  bottom: -6rem
+  transition: all 0.2s ease-in-out
+  visibility: hidden
+  display: flex
+  justify-content: center
+  align-items: center
+
+  @media (max-width: $media_md)
+    padding: 0.5rem
+    right: 1rem
+    bottom: -6rem
+
+
+.arrow-up .icon
+  font-size: 1rem
+  color: $color-primary
+
+  @media (max-width: $media_md)
+    font-size: 0.8rem
+
+
+.arrow-up.show
+  visibility: visible
+  transition: all 0.3s ease-in-out
+  right: 4rem
+  bottom: 3rem
+  
+
+  @media (max-width: $media_md)
+    right: 1rem
+    bottom: 1rem

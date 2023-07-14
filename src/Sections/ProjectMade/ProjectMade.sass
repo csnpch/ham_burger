@@ -1,0 +1,68 @@
+@use './../../common/assets/css/variables.sass' as *
+
+.project-made-container
+  padding-top: 8rem
+
+
+  @media (max-width: $media-lg)
+    padding-top: 6rem
+
+
+.project-made-content
+  margin-top: 2.6rem
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  grid-template-rows: auto
+  gap: 1rem
+
+
+  @media (max-width: $media-2xl)
+    grid-template-columns: repeat(3, 1fr)
+    gap: 0.8rem
+
+  
+  @media (max-width: $media-lg)
+    grid-template-columns: repeat(2, 1fr)
+
+  @media (max-width: $media-md)
+    margin-top: 2rem
+    grid-template-columns: 1fr
+    gap: 1.5rem
+
+
+
+
+.view-more
+  height: 16rem
+  width: 100%
+  cursor: pointer
+  border: 2px solid #FFFFFF80
+  border-radius: 0.6rem
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  letter-spacing: 0.06rem
+  font-weight: 500
+  font-size: 1.6rem
+  color: #BCBCBC
+  gap: 0.4rem
+  transition: all 0.2s ease-in-out
+
+  &:hover
+    border: 2px solid #FFFFFF
+    background: #FFFFFF10
+
+    .label
+      transform: scale(1.04)
+    
+    .icon
+      transform: scale(1.04)
+
+  @media (max-width: $media-2xl)
+    height: 13.4rem
+
+
+  @media (max-width: $media-md)
+    height: 5rem
+    font-size: 1rem

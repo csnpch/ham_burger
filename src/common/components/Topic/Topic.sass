@@ -1,0 +1,28 @@
+@use './../../assets/css/variables' as *
+
+
+
+.topic-container
+  font-family: $font-secondary
+  display: flex
+  flex-direction: column
+  gap: 1rem
+
+
+.topic-container .title
+  display: flex
+  gap: 1rem
+  font-size: 1.6rem
+
+  @media (max-width: $media-lg)
+    font-size: 1.2rem
+    padding-top: 0.6rem
+
+
+.topic-container .sub-title
+  color: $color-primary-drop
+  font-size: 0.9rem
+  line-height: 1.4rem
+
+  @media (max-width: $media-lg)
+    font-size: 0.8rem
