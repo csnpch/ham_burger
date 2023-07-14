@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import './App.sass'
 import '@/common/assets/css/index.sass'
@@ -15,6 +15,8 @@ import { media_md } from '@/common/utils/functions/mediaQuery'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import Sidebar from './common/components/Sidebar/Sidebar'
+import FullViewProject, { InterfaceFullViewProject } from './common/components/FullViewProject/FullViewProject'
+import { FullViewContext } from './common/data/context/fullViewContext'
 
 
 function App() {
@@ -22,6 +24,9 @@ function App() {
   document.title = 'Ham, Burger'
 
   const refArrowUp = useRef<HTMLDivElement|null>(null)
+  const [stateFullPreView, setStateFullPreview] = useState<boolean>(false)
+  const [dataFullPreviewProject, setDataFullPreviewProject] = useState<InterfaceFullViewProject|null>(null)
+
 
   const handleScroll = () => {
     const y = window.scrollY
@@ -34,39 +39,65 @@ function App() {
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
   }, [])
+
+
+  useEffect(() => {
+    document.body.style.overflow = 
+      stateFullPreView ? 'hidden' : 'scroll'
+  }, [stateFullPreView])
   
 
   return (
     <>
-
-      {/* <Test /> */}
-      {
-        !media_md() &&
-        <Mouse />
-      }
-      <div 
-        ref={refArrowUp} 
-        className={`arrow-up`} 
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      <FullViewContext.Provider
+        value={{
+          onFullView: stateFullPreView,
+          setOnFullView: setStateFullPreview,
+          dataFullView: dataFullPreviewProject,
+          setDataFullPreviewProject: setDataFullPreviewProject
+        }}
       >
-        <FontAwesomeIcon className={`icon`} icon={faChevronUp} />
-      </div>
-    
-      <LayoutMain>
-      
-        <Sidebar />
-        <Navbar />
-        <Hero />
-        <ContainerBase
-          className={`pb-10`}
+        {
+          !media_md() &&
+          <Mouse />
+        }
+        <div
+          ref={refArrowUp} 
+          className={`arrow-up`} 
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
-          <Education />
-          <Experience />
-          <ProjectMade />
-          <Skill />
-        </ContainerBase>
+          <FontAwesomeIcon className={`icon`} icon={faChevronUp} />
+        </div>
+      
+        <LayoutMain>
 
-      </LayoutMain>
+          <Sidebar />
+          <Navbar />
+          <Hero />
+          <ContainerBase
+            className={`pb-10`}
+          >
+            <Education />
+            <Experience />
+            <ProjectMade />
+            <Skill />
+          </ContainerBase>
+
+          <FullViewProject
+            stateFullView={{
+              isOpen: stateFullPreView,
+              setOpen: setStateFullPreview
+            }}
+            title={dataFullPreviewProject?.title || ''}
+            subTitle={dataFullPreviewProject?.subTitle || ''}
+            description={dataFullPreviewProject?.description || ''}
+            img_path={dataFullPreviewProject?.img_path || []}
+            tools_used={dataFullPreviewProject?.tools_used || []}
+            link={dataFullPreviewProject?.link || ''}
+          />
+
+        </LayoutMain>
+      </FullViewContext.Provider>
     </>
   )
 }

@@ -10,7 +10,8 @@ export interface dataTimelineInterface {
     helper: string
   }
   link: string
-  tools_used: IdevToolsItem[]
+  tools_used: IdevToolsItem[],
+  img_path?: string[],
 }
 
 
@@ -33,6 +34,7 @@ export const dataTimeline: dataTimelineInterface[] = [
       dev_tools.tools.antd,
       dev_tools.tools.mantine_ui,
     ],
+    img_path: [],
   },
   {
     title: `iWant ( Mobile App, APK )`,
@@ -48,6 +50,7 @@ export const dataTimeline: dataTimelineInterface[] = [
       dev_tools.tools.android_studio,
       dev_tools.languages.kotlin,
     ],
+    img_path: [],
   },
   {
     title: `ITuy ( WebApp )`,
@@ -64,6 +67,7 @@ export const dataTimeline: dataTimelineInterface[] = [
       dev_tools.tools.tailwind_css,
       dev_tools.tools.mysql
     ],
+    img_path: [],
   },
   {
     title: `Queuee ( Realtime WebApp )`,
@@ -84,6 +88,7 @@ export const dataTimeline: dataTimelineInterface[] = [
       dev_tools.tools.tailwind_css,
       dev_tools.tools.antd,
     ],
+    img_path: [],
   },
   {
     title: `Siblings matching ( WebApp )`,
@@ -101,6 +106,7 @@ export const dataTimeline: dataTimelineInterface[] = [
       dev_tools.languages.vue,
       dev_tools.tools.tailwind_css,
     ],
+    img_path: [],
   },
   {
     title: `QA Tester ( Automation )`,
@@ -116,5 +122,6 @@ export const dataTimeline: dataTimelineInterface[] = [
       dev_tools.tools.android_studio,
       dev_tools.languages.kotlin,
     ],
+    img_path: [],
   },
 ] 

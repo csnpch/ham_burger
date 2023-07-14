@@ -2,7 +2,7 @@
 @use './properties' as *
 @use './animation' as *
 @use './variables' as *
-@import 'https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Lacquer&display=swap'
+@import 'https://fonts.googleapis.com/css2?family=Kanit:wght@300400500600700&family=Lacquer&display=swap'
 
 
 body
@@ -44,3 +44,19 @@ body:hover::-webkit-scrollbar
   max-width: $max-width
 
 
+
+.custom_scrollbar::-webkit-scrollbar
+    width: 8px
+    height: 8px
+    background-color: #F5F5F5
+
+
+.custom_scrollbar::-webkit-scrollbar-thumb
+    background-color: #B5B5B5
+    border-radius: 10px
+
+
+
+.custom_scrollbar:hover::-webkit-scrollbar-thumb, 
+.custom_scrollbar:hover::-webkit-scrollbar
+    display: block

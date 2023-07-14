@@ -1,9 +1,10 @@
+import { useEffect, useRef, useContext } from "react"
 import { _class } from "@/common/utils/functions/helper"
-import { dataTimelineInterface } from "../data"
+import { dataTimelineInterface } from "./../data"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import { FullViewContext } from "@/common/data/context/fullViewContext"
 import ContentHover from "./ContentHover"
-import { useEffect, useRef } from "react"
 
 
 
@@ -29,6 +30,21 @@ export default function CardExperience(props: propsInterface) {
 
   const oneRange = props.data.date.end === ''
   const refHover = useRef<HTMLDivElement>(null)
+  const fullViewContext = useContext(FullViewContext)
+
+
+  const handleClickViewMore = () => {
+    fullViewContext.setDataFullPreviewProject({
+      title: props.data.title,
+      subTitle: props.data.subtitle || '-',
+      description: props.data.description || '-',
+      link: props.data.link || '',
+      tools_used: props.data.tools_used || [],
+      link_live_preview: props.data.link || '',
+      img_path: props.data.img_path || []
+    })
+    fullViewContext.setOnFullView(true)
+  }
 
 
   useEffect(() => {
@@ -91,13 +107,12 @@ export default function CardExperience(props: propsInterface) {
             </p>
           </div>
 
-          <a
-            href={props.data.link}
-            target='_blank' 
+          <div
             className={`more-detail`}
+            onClick={handleClickViewMore}
           >
             <FontAwesomeIcon icon={faAngleRight} />
-          </a>
+          </div>
 
         </div>
 
