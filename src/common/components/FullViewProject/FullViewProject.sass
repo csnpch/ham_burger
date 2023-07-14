@@ -30,10 +30,10 @@
 
 
 .fullview-container-slide-fade.fade-in
-  animation: fullview-fadein 0.6s ease-in-out
+  animation: fullview-fadein 0.4s ease-in-out
 
 .fullview-container-slide-fade.fade-out
-  animation: fullview-fadeout 0.4s ease-in-out forwards
+  animation: fullview-fadeout 0.3s ease-in-out forwards
 
 
 .fullview-content-container
@@ -70,6 +70,10 @@
   padding: 0.4rem
   letter-spacing: 0.1rem
   box-shadow: 0px 0px 0.4rem rgba(0, 0, 0, 0.2)
+
+  
+  @media (max-width: $media-md)
+    font-size: 0.8rem
   
 
 .fullview-content-container .img-warpper
