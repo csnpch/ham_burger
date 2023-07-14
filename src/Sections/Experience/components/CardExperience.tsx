@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import { FullViewContext } from "@/common/data/context/fullViewContext"
 import ContentHover from "./ContentHover"
+import { media_md } from './../../../common/utils/functions/mediaQuery';
 
 
 
@@ -75,6 +76,7 @@ export default function CardExperience(props: propsInterface) {
         container-card-item relative
         ${props.classes?.container}
       `)}
+      onClick={media_md() ? handleClickViewMore : undefined}
     >
 
         <ContentHover 
