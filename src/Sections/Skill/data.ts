@@ -48,7 +48,7 @@ export const mySkills: objectSkillsInterface = {
     ],
     expert: [
       dev_tools.languages.react,
-      dev_tools.languages.nextjs,      
+      dev_tools.languages.nextts,      
     ],
   },
   tools: {

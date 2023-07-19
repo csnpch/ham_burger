@@ -5,7 +5,7 @@ import react from '@/common/assets/icon/dev_tools/react.png'
 import nodejs from '@/common/assets/icon/dev_tools/nodejs.png'
 import cpp from '@/common/assets/icon/dev_tools/cpp.png'
 import kotlin from '@/common/assets/icon/dev_tools/kotlin.png'
-import nextjs from '@/common/assets/icon/dev_tools/nextjs.svg'
+import nextts from '@/common/assets/icon/dev_tools/nextts.svg'
 import php from '@/common/assets/icon/dev_tools/php.png'
 import python from '@/common/assets/icon/dev_tools/python.png'
 import vue from '@/common/assets/icon/dev_tools/vue.png'
@@ -17,7 +17,7 @@ import svelte from '@/common/assets/icon/dev_tools/svelte.png'
 import java from '@/common/assets/icon/dev_tools/java.png'
 import postgreSQL from '@/common/assets/icon/dev_tools/postgreSQL.png'
 // tools
-import netlify from '@/common/assets/icon/dev_tools/netlify.png'
+import netlify from '@/common/assets/icon/dev_tools/netlify.webp'
 import socket_io from '@/common/assets/icon/dev_tools/socket_io.png'
 import android_studio from '@/common/assets/icon/dev_tools/android_studio.png'
 import mongodb from '@/common/assets/icon/dev_tools/mongodb.svg'
@@ -104,9 +104,9 @@ export const dev_tools = {
       label: 'Python',
       source: python
     },
-    nextjs: {
-      label: 'Next.js',
-      source: nextjs
+    nextts: {
+      label: 'Next.ts',
+      source: nextts
     },
     vue: {
       label: 'Vue.js',
