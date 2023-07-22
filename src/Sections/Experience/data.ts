@@ -10,6 +10,7 @@ export interface dataTimelineInterface {
     helper: string
   }
   link: string
+  link_live_preview?: string|undefined,
   tools_used: IdevToolsItem[],
   img_path?: string[],
 }
@@ -34,12 +35,16 @@ export const dataTimeline: dataTimelineInterface[] = [
       dev_tools.tools.antd,
       dev_tools.tools.mantine_ui,
     ],
-    img_path: [],
+    // link_live_preview: `https://dashboard.hai.moph.go.th/`,
+    img_path: [
+      `https://images.unsplash.com/photo-1560472354-0088b5dc9d8d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1130&q=80`,
+      `https://images.unsplash.com/photo-1560472354-0088b5dc9d8d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1130&q=80`
+    ],
   },
   {
     title: `iWant ( Mobile App, APK )`,
     subtitle: `( Frontend  |  project in university subjects )`,
-    description: `An application for anyone who wants something But don't want to go out and buy it yourself. Or don't have a vehicle to go out to buy`,
+    description: `An application for anyone who wants something But don't want to go out and buy it yourself. Or don't have a vehicle to go out to buy, this app look like delivery food`,
     date: {
       start: `April, 2023`,
       end: ``,

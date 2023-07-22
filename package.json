@@ -24,6 +24,7 @@
     "react-tsparticles": "^2.10.1",
     "react-use-draggable-scroll": "^0.4.7",
     "sass": "^1.63.4",
+    "swiper": "^10.0.4",
     "tsparticles": "^2.10.1"
   },
   "devDependencies": {

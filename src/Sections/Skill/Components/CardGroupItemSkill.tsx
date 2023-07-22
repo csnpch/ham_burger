@@ -91,7 +91,7 @@ export default function CardGroupItemSkill(props: propsInterface) {
             <Reveal>
               <div className={`level expert`}>
                 <p className={`label`}>
-                  Expert
+                  Advanced
                 </p>
                 <div className={`group-wrapper`}>
                   { getSkills(props.data.expert) }  
