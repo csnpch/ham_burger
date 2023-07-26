@@ -14,14 +14,16 @@ export default function CardProject(props: propsInterface) {
   const fullViewContext = useContext(FullViewContext)
 
   const handleClickViewMore = () => {
+    console.log(props.data.external_link)
     fullViewContext.setOnFullView(true)
     fullViewContext.setDataFullPreviewProject({
       title: props.data.title,
       subTitle: props.data.subtitle || '-',
       description: props.data.description || '-',
       link: props.data.link || '',
+      external_link: props.data.external_link,
       tools_used: props.data.tools_used || [],
-      link_live_preview: props.data.link || '',
+      link_live_preview: props.data.link_live_preview || undefined,
       img_path: props.data.img_path
     })
   }

@@ -6,16 +6,25 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faImage, faWifi, faXmark } from '@fortawesome/free-solid-svg-icons'
 
+// Swiper
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination, Navigation } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+import { media_lg } from '@/common/utils/functions/mediaQuery'
 
 
 export interface InterfaceFullViewProject {
   img_path?: string[],
   title: string,
   subTitle?: string,
-  description?: string,
+  description?: string|JSX.Element|React.ReactNode,
   tools_used?: IdevToolsItem[] 
   link?: string,
-  link_live_preview?: string,
+  external_link?: string,
+  link_live_preview?: JSX.Element|React.ReactNode|string|'#',
+  custom_state_preview?: string,
 }
 
 interface propsInterface extends InterfaceFullViewProject {
@@ -26,22 +35,48 @@ interface propsInterface extends InterfaceFullViewProject {
 }
 
 
-export default function FullViewProject(props: propsInterface) {
-  
-  
-  const { 
+export default function FullViewProject({
+  link_live_preview = '#',
+  ...props
+}: propsInterface) {
+
+  const {
     img_path, tools_used,
     stateFullView 
   } = props
   
   const [classAnimation, setClassAnimation] = useState('fade-in')
 
+  const mediaMd = media_lg()
+
+
+  const handleScrollToTop = () => {
+    const element = document.querySelector('.img_group_preview')
+    element?.scrollTo({top: 0, behavior: 'smooth'})
+  }
+
   
-  const ImagePreviewList = img_path!.length > 0 ? img_path?.map((path, index) => (
-    <div key={index} className={`img-warpper preview`}>
+  const ImagePreviewList = img_path!.length > 0 ? img_path?.map((path, index) => {
+
+    const tmpElement = <a
+      target={props.external_link ? '_blank' : '_self'}
+      href={props.external_link ? props.external_link : '#'}
+      className={`img-warpper preview`}
+    >
       <img src={path} alt="#" width={'100%'} height={'100%'} />
-    </div> 
-  )) : <div className={`w-full text-center`} style={{marginTop: '2rem'}}>- No picture -</div>
+    </a>
+
+    if (mediaMd) return tmpElement
+
+    return (
+      <SwiperSlide
+        key={index}
+        className={`img-warpper`}
+      >
+        { tmpElement }
+      </SwiperSlide>
+    )
+  }) : <div className={`w-full text-center`} style={{marginTop: '2rem'}}>- No picture -</div>
 
 
   const ToolsUsedList = tools_used?.map((item, index) => (
@@ -85,12 +120,12 @@ export default function FullViewProject(props: propsInterface) {
         
         <div className={`fullview-content-container`}>
           
-          <div className={`img_group_preview custom_scrollbar`}>
+          <div className={`img_group_preview custom_scrollbar ${link_live_preview !== '#' && 'bg-white'}`}>
             <SlideFade
               delay={400}
               style={{
                 width: '100%',
-                background: props.link_live_preview ? '#318513' : '#0472c7'
+                background: link_live_preview !== '#' ? '#318513' : '#0472c7'
               }}
               classes={{
                 container: 'w-full',
@@ -99,7 +134,7 @@ export default function FullViewProject(props: propsInterface) {
               }}
             >
                 {
-                  props.link_live_preview ?
+                  link_live_preview !== '#' ?
                   <p>
                     <FontAwesomeIcon icon={faWifi} />
                     &nbsp;&nbsp;Live Preview
@@ -111,15 +146,36 @@ export default function FullViewProject(props: propsInterface) {
                 }
             </SlideFade>
             {
-              props.link_live_preview ?
-              <iframe 
-                src={
-                  props.link_live_preview 
-                  || ''
-                } 
-                width="100%" height="100%"
-              />
-              : ImagePreviewList
+              link_live_preview !== '#' ?
+              (
+                typeof link_live_preview === 'string' ?
+                <iframe 
+                  src={
+                    link_live_preview
+                    || 'www.google.com'
+                  } 
+                  width="100%" height="100%"
+                  className={`iframe-preview`}
+                />
+                : link_live_preview
+              )
+              : <>
+                {
+                  mediaMd 
+                  ? ImagePreviewList
+                  : <Swiper
+                    pagination={{
+                      type: 'fraction',
+                    }}
+                    navigation={true}
+                    modules={[Pagination, Navigation]}
+                    className="img-warpper-swiper"
+                    onSlideChange={() => handleScrollToTop()}
+                  >
+                    { ImagePreviewList }
+                  </Swiper>
+                }
+              </>
             }
           </div>
           

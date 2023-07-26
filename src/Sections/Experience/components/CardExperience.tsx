@@ -4,6 +4,7 @@ import { dataTimelineInterface } from "./../data"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import { FullViewContext } from "@/common/data/context/fullViewContext"
+import { media_md } from './../../../common/utils/functions/mediaQuery';
 import ContentHover from "./ContentHover"
 
 
@@ -31,7 +32,7 @@ export default function CardExperience(props: propsInterface) {
   const oneRange = props.data.date.end === ''
   const refHover = useRef<HTMLDivElement>(null)
   const fullViewContext = useContext(FullViewContext)
-
+  
 
   const handleClickViewMore = () => {
     fullViewContext.setDataFullPreviewProject({
@@ -40,7 +41,7 @@ export default function CardExperience(props: propsInterface) {
       description: props.data.description || '-',
       link: props.data.link || '',
       tools_used: props.data.tools_used || [],
-      link_live_preview: props.data.link || '',
+      link_live_preview: props.data.link_live_preview || undefined,
       img_path: props.data.img_path || []
     })
     fullViewContext.setOnFullView(true)
@@ -68,13 +69,14 @@ export default function CardExperience(props: propsInterface) {
 
   return (
     <>
-    
+
     <div 
       ref={refHover}
       className={_class(`
         container-card-item relative
         ${props.classes?.container}
       `)}
+      onClick={media_md() ? handleClickViewMore : undefined}
     >
 
         <ContentHover 

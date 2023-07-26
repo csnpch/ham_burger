@@ -93,7 +93,10 @@ function App() {
             description={dataFullPreviewProject?.description || ''}
             img_path={dataFullPreviewProject?.img_path || []}
             tools_used={dataFullPreviewProject?.tools_used || []}
-            link={dataFullPreviewProject?.link || ''}
+            link={dataFullPreviewProject?.link || '#'}
+            link_live_preview={dataFullPreviewProject?.link_live_preview || '#'}
+            custom_state_preview={dataFullPreviewProject?.custom_state_preview || ''}
+            external_link={dataFullPreviewProject?.external_link || ''}
           />
 
         </LayoutMain>
