@@ -10,6 +10,7 @@ import CardExperience from './components/CardExperience'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFigma } from '@fortawesome/free-brands-svg-icons'
 import Reveal from '@/common/components/Animation/Reveal'
+import { useEffect } from 'react'
 
 
 interface propsInterface {}
@@ -35,6 +36,15 @@ export default function Experience({}: propsInterface) {
       />
     </Reveal>
   ))
+
+
+  useEffect(() => {
+    console.log('document', 'working')
+    document.querySelectorAll('.hide-on-body').forEach((item) => {
+      item.classList.add('hidden')
+    })
+  }, [document])
+  
 
   
   return (

@@ -23,7 +23,7 @@ export interface InterfaceFullViewProject {
   tools_used?: IdevToolsItem[] 
   link?: string,
   external_link?: string,
-  link_live_preview?: string|'#',
+  link_live_preview?: JSX.Element|React.ReactNode|string|'#',
   custom_state_preview?: string,
 }
 
@@ -147,14 +147,18 @@ export default function FullViewProject({
             </SlideFade>
             {
               link_live_preview !== '#' ?
-              <iframe 
-                src={
-                  link_live_preview
-                  || 'www.google.com'
-                } 
-                width="100%" height="100%"
-                className={`iframe-preview`}
-              />
+              (
+                typeof link_live_preview === 'string' ?
+                <iframe 
+                  src={
+                    link_live_preview
+                    || 'www.google.com'
+                  } 
+                  width="100%" height="100%"
+                  className={`iframe-preview`}
+                />
+                : link_live_preview
+              )
               : <>
                 {
                   mediaMd 

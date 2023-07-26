@@ -40,8 +40,6 @@ import raffle_prize_main from '@/common/assets/img/projects/raffle_prize/main.we
 
 // Brain plz Calendar
 import brain_plz_main from '@/common/assets/img/projects/brain_plz/main.webp' 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faLink } from "@fortawesome/free-solid-svg-icons"
 
 // Bababrown QRcode
 import bbbrown_main from '@/common/assets/img/projects/bababrown/hold_insert_text.webp'
@@ -58,6 +56,7 @@ import incopens_home from '@/common/assets/img/projects/incopens/home.webp'
 
 // Dormitory System ( CMD )
 import dorm_cmd_main from '@/common/assets/img/projects/dormitory_cmd/cpp_example.webp'
+import { getCustomExternalLink } from "@/common/utils/functions/helper"
 
 
 
@@ -74,32 +73,18 @@ export interface dataProjectMadeInterface {
 }
 
 
-const getCustomExternalLink = (link: string) => (
-  <>
-    <br />
-    <br />
-    <a 
-      className={`linkExternal`}
-      style={{ fontSize: '1.2rem', letterSpacing: '0.04rem' }}
-      target="_blank"
-      href={link}
-    >
-      <FontAwesomeIcon icon={faLink} /> Preview external link
-    </a>
-  </>
-)
 
 
 export const dataProjectMade: dataProjectMadeInterface[] = [
   {
     title: `Dormitory System ( WebApp )`,
-    subtitle: `( Fullstack  |  project in university subjects )`,
+    subtitle: `( Fullstack  |  Project in university subjects )`,
     description: `Charity project for student dormitory Increase convenience for students to use the booking website`,
     link: `https://github.com/csnpch/dormitory_system`,
     tools_used: [
       dev_tools.languages.php,
-      dev_tools.tools.tailwind_css,
-      dev_tools.tools.mysql
+      dev_tools.tools.mysql,
+      dev_tools.languages.sass,
     ],
     img_path: [
       dorm_home, dorm_home2, dorm_example_room, dorm_plan_dorm, 
@@ -115,7 +100,7 @@ export const dataProjectMade: dataProjectMadeInterface[] = [
   },
   {
     title: `Auto-populate datas in google sheet`,
-    subtitle: `( Fullstack  |  project to facilitate work in university )`,
+    subtitle: `( Fullstack  |  Project to facilitate work in university )`,
     description: <>
       This is my first portfolio, I made it with Vue.js and TailwindCSS
       {getCustomExternalLink(`https://www.facebook.com/csnp.ch/videos/843967539853364`)}
@@ -123,40 +108,48 @@ export const dataProjectMade: dataProjectMadeInterface[] = [
     link: `https://github.com/csnpch/auto_populate_datas_in_google_sheet`,
     external_link: `https://www.facebook.com/csnp.ch/videos/843967539853364`,
     tools_used: [
-      dev_tools.languages.cpp,
+      dev_tools.languages.python,
+      dev_tools.tools.selenium,
     ],
     img_path: [auto_populate_main],
     link_live_preview: ``,
   },
   {
     title: `Raffle Prize`,
-    subtitle: `( Frontend  |  hobbies project, parties, New Year's Eve )`,
+    subtitle: `( Frontend  |  Hobbies project, parties, New Year's Eve )`,
     description: `Random prize project from the input list fireworks are used and sound effects for entertainment while using`,
     link: `https://github.com/csnpch/raffle_prize`,
     tools_used: [
-      dev_tools.languages.cpp,
+      dev_tools.languages.javascript,
+      dev_tools.languages.react,
+      dev_tools.tools.tailwind_css,
     ],
     img_path: [raffle_prize_main],
     link_live_preview: `https://prizegift.netlify.app/`,
   },
   {
     title: `Brain plz Calendar`,
-    subtitle: `( Fullstack  |  project in university subjects )`,
+    subtitle: `( Fullstack  |  Project in university subjects )`,
     description: `Calendar for daily life, create events and generate invite links. to share activities as a group`,
     link: `https://github.com/csnpch/brain_plz_calendar`,
     tools_used: [
-      dev_tools.languages.cpp,
+      dev_tools.languages.javascript,
+      dev_tools.languages.nodejs,
+      dev_tools.languages.vue,
+      dev_tools.tools.tailwind_css,
     ],
     img_path: [brain_plz_main],
     link_live_preview: `https://www.youtube.com/embed/UEK239MyU7Y`,
   },
   {
     title: `Bababrown QRcode`,
-    subtitle: `( Fullstack  |  project in university subjects )`,
+    subtitle: `( Fullstack  |  Project in university subjects )`,
     description: `Calendar for daily life, create events and generate invite links. to share activities as a group`,
     link: `https://github.com/csnpch/bababrown_qrcode`,
     tools_used: [
-      dev_tools.languages.cpp,
+      dev_tools.languages.javascript,
+      dev_tools.languages.nodejs,
+      dev_tools.tools.tailwind_css,
     ],
     img_path: [
       bbbrown_main, bbbrown_on_insert, bbbrown_on_scan, bbbrown_gen_qr
@@ -164,11 +157,14 @@ export const dataProjectMade: dataProjectMadeInterface[] = [
   },
   {
     title: `Incopens`,
-    subtitle: `( Fullstack  |  hobbies project, use in my family )`,
+    subtitle: `( Fullstack  |  Hobbies project, use in my family )`,
     description: `description`,
     link: `https://incopens4489.netlify.app/`,
     tools_used: [
-      dev_tools.languages.cpp,
+      dev_tools.languages.javascript,
+      dev_tools.languages.nodejs,
+      dev_tools.languages.nextts,
+      dev_tools.tools.tailwind_css,
     ],
     img_path: [incopens_home],
     link_live_preview: `https://incopens4489.netlify.app/`,
@@ -180,7 +176,7 @@ export const dataProjectMade: dataProjectMadeInterface[] = [
     description: `CRUD data in small-file eg. -> (.txt, .md), Easy to use file by java class`,
     link: `https://github.com/csnpch/JavaFileManage`,
     tools_used: [
-      dev_tools.languages.cpp,
+      dev_tools.languages.java,
     ],
     img_path: [java_main, java_main2],
     can_hide: true,
