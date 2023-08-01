@@ -18,8 +18,9 @@ import iwant_detail4 from '@/common/assets/img/projects/iwant/detail4.webp'
 import iwant_detail5 from '@/common/assets/img/projects/iwant/detail5.webp'
 
 // Internship QA
-import intern_qa_main from '@/common/assets/img/projects/intern/qa/main.webp'
-import intern_qa_team from '@/common/assets/img/projects/intern/qa/qa_team.webp'
+import scb_intern_qa_main from '@/common/assets/img/projects/intern/qa/main.webp'
+import scb_intern_qa_team from '@/common/assets/img/projects/intern/qa/qa_team.webp'
+import scb_intern_cert from '@/common/assets/img/certificates/scb/cert.webp'
 
 // Hai Dashboard
 import hai_cert from '@/common/assets/img/certificates/hai_dashboard/cert.webp'
@@ -171,7 +172,9 @@ export const dataTimeline: dataTimelineInterface[] = [
       dev_tools.languages.python,
     ],
     img_path: [
-      intern_qa_team, intern_qa_main,
+      scb_intern_qa_team, 
+      scb_intern_qa_main,
+      scb_intern_cert
     ],
   },
 ] 
