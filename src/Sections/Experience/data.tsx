@@ -47,11 +47,11 @@ export const dataTimeline: dataTimelineInterface[] = [
   {
     title: `Hai Dashbaord ( WebApp )`,
     subtitle: `( Frontend  |  Cooperate with healthcare accreditation institute )`,
-    description: `The Project of Quality Data Project for Hospitals Nationwide Requested to cooperate with government agencies`,
+    description: `Nationwide hospital quality report project in collaboration with state enterprises`,
     date: {
-      start: `May, 2023`,
-      end: `June, 2023`,
-      helper: '2 months',
+      start: `July, 2023`,
+      end: `May, 2023`,
+      helper: '3 months',
     },
     link: `https://github.com/csnpch/HaiDashboard`,
     tools_used: [
