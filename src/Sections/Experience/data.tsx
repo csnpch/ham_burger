@@ -28,6 +28,10 @@ import doppio_my_picture from '@/common/assets/img/projects/intern/doppio/my_pic
 // Hai Dashboard
 import hai_cert from '@/common/assets/img/certificates/hai_dashboard/cert.webp'
 
+// Fire Alarm
+import fire_alarm_main from '@/common/assets/img/projects/fire_alarm/main_page.png'
+import fire_alarm_site_drilldown from '@/common/assets/img/projects/fire_alarm/site_drilldown.png'
+import fire_alarm_alert_page from '@/common/assets/img/projects/fire_alarm/alert_page.png'
 
 
 export interface dataTimelineInterface {
@@ -58,14 +62,14 @@ export const dataTimeline: dataTimelineInterface[] = [
     },
     link: ``,
     tools_used: [
-      dev_tools.tools.robot_framework,
-      dev_tools.tools.playwright,
-      dev_tools.tools.gitlab,
+      dev_tools.languages.react,
       dev_tools.languages.typescript,
-      dev_tools.languages.python,
+      dev_tools.tools.elysia,
     ],
     img_path: [
-      doppio_my_picture,
+      fire_alarm_main,
+      fire_alarm_site_drilldown,
+      fire_alarm_alert_page,
     ],
   },
   {
@@ -81,9 +85,8 @@ export const dataTimeline: dataTimelineInterface[] = [
     tools_used: [
       dev_tools.tools.robot_framework,
       dev_tools.tools.playwright,
-      dev_tools.tools.gitlab,
-      dev_tools.languages.typescript,
-      dev_tools.languages.python,
+      dev_tools.tools.tailwind_css,
+      dev_tools.tools.antd,
     ],
     img_path: [
       doppio_my_picture,
