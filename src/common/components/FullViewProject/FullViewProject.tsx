@@ -208,14 +208,17 @@ export default function FullViewProject({
             </div>
 
             <div className={`visit-group`}>
-
               {/* github */}
-              <a href={props.link} target='_blank'>
-                <div className={`btn-visit github`}>
-                  <FontAwesomeIcon icon={faGithub} />  
-                  <p>GitHub Repository</p>
-                </div>
-              </a>
+              {
+                (props.link && props.link !== '' && props.link !== '#') && (
+                  <a href={props.link} target='_blank'>
+                    <div className={`btn-visit github`}>
+                      <FontAwesomeIcon icon={faGithub} />  
+                      <p>GitHub Repository</p>
+                    </div>
+                  </a>
+                )
+              }
             </div>
           
           </div>

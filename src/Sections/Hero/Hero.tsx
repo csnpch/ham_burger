@@ -53,11 +53,6 @@ export default function Hero() {
                     </p>
                   </SlideFade>
                   <SlideFade>
-                    <p className={`text-highlight`}>
-                      # I'm studying in my final year of bachelor's degree
-                    </p>
-                  </SlideFade>
-                  <SlideFade>
                     <div className={`contact-group`}>
                       {
                         contacts.map((contact, index) => (
@@ -98,7 +93,7 @@ export default function Hero() {
                     <p>" Ham "</p>
                   </div>
                   <p className={`text-role`}>
-                    Frontend Developer
+                    Full-Stack Developer
                   </p>
                 </div>
                 
