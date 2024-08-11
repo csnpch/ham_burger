@@ -32,13 +32,12 @@ export const mySkills: objectSkillsInterface = {
       dev_tools.languages.python,
       dev_tools.languages.cpp,
       dev_tools.languages.php,
-      dev_tools.languages.robot_framework,
       dev_tools.languages.css,
       dev_tools.languages.sass,
     ],
   },
   frameworks: {
-    label: 'Frameworks',
+    label: 'Frameworks & Libaries',
     basic: [
     ],
     intermediate: [
@@ -49,6 +48,10 @@ export const mySkills: objectSkillsInterface = {
     expert: [
       dev_tools.languages.react,
       dev_tools.languages.nextts,      
+      dev_tools.tools.elysia,
+      dev_tools.tools.robot_framework,
+      dev_tools.tools.playwright,
+      dev_tools.tools.appium,
     ],
   },
   tools: {
@@ -62,9 +65,9 @@ export const mySkills: objectSkillsInterface = {
       dev_tools.tools.selenium,
       dev_tools.tools.mongodb,
       dev_tools.tools.postgreSQL,
+      dev_tools.tools.android_studio,
     ],
     expert: [
-      dev_tools.tools.android_studio,
       dev_tools.tools.tailwind_css,
       dev_tools.tools.antd,
       dev_tools.tools.mantine_ui,

@@ -17,11 +17,15 @@ import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import Sidebar from './common/components/Sidebar/Sidebar'
 import FullViewProject, { InterfaceFullViewProject } from './common/components/FullViewProject/FullViewProject'
 import { FullViewContext } from './common/data/context/fullViewContext'
+import IconTitle from './common/assets/icon/icon_title.ico'
 
 
 function App() {
 
   document.title = 'Ham, Burger'
+  const link = document.querySelector("link[rel~='icon']") as HTMLLinkElement
+  link.href = IconTitle
+
 
   const refArrowUp = useRef<HTMLDivElement|null>(null)
   const [stateFullPreView, setStateFullPreview] = useState<boolean>(false)

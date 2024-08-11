@@ -34,6 +34,9 @@ import gitlab from '@/common/assets/icon/dev_tools/gitlab.png'
 import flutter from '@/common/assets/icon/dev_tools/flutter.webp'
 import dart from '@/common/assets/icon/dev_tools/dart.png'
 import docker from '@/common/assets/icon/dev_tools/docker.png'
+import appium from '@/common/assets/icon/dev_tools/appium.png'
+import playwright from '@/common/assets/icon/dev_tools/playwright.png'
+import elysia_framework from '@/common/assets/icon/dev_tools/elysia.avif'
 
 
 export interface IdevToolsItem {
@@ -112,10 +115,6 @@ export const dev_tools = {
       label: 'Vue.js',
       source: vue
     },
-    robot_framework: {
-      label: 'Robot Framework',
-      source: robot_framework
-    },
   },
   tools: {
     docker: {
@@ -181,6 +180,22 @@ export const dev_tools = {
     netlify: {
       label: 'Netlify',
       source: netlify
+    },
+    appium: {
+      label: 'Appium Library',
+      source: appium
+    },
+    playwright: {
+      label: 'Playwright Framework',
+      source: playwright
+    },
+    robot_framework: {
+      label: 'Robot Framework',
+      source: robot_framework
+    },
+    elysia: {
+      label: 'Elysia JS',
+      source: elysia_framework
     },
   }
 }

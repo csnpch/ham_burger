@@ -79,7 +79,7 @@ export const dataProjectMade: dataProjectMadeInterface[] = [
   {
     title: `Dormitory System ( WebApp )`,
     subtitle: `( Fullstack  |  Project in university subjects )`,
-    description: `Charity project for student dormitory Increase convenience for students to use the booking website`,
+    description: `Student dormitory charity project Make it more convenient for students to use the booking website. and manage various information's.`,
     link: `https://github.com/csnpch/dormitory_system`,
     tools_used: [
       dev_tools.languages.php,

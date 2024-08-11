@@ -10,8 +10,11 @@ export default function ContentHover(props: propsInterface) {
   const ListItemToolUsed = props.toolsUsed.map((item, index) => (
     <div 
       key={index}
-      className={`item`}
+      className={`item relative`}
     >
+      <div className={`absolute tooltip`}>
+        <p>{item.label}</p>
+      </div>
       <img src={item.source} alt="#" width={`100%`} height={`100%`} />
     </div>
   ))

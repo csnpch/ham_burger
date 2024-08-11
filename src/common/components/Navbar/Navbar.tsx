@@ -64,6 +64,7 @@ export default function Navbar() {
       refNavbar.current?.classList.remove('show')
     }
   }
+  
 
   useEffect(() => {
     refNavbar.current?.classList.add('top')
@@ -104,7 +105,7 @@ export default function Navbar() {
             <span
               className={`navbar-logo-text`}
             >
-              Ham, buger
+              Ham, burger
             </span>
           </div>
 

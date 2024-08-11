@@ -1,5 +1,5 @@
 @use './../../../common/assets/css/variables.sass' as *
-  
+
 .exp-container-hover
   position: absolute !important
   padding: 0.3rem 0.4rem
@@ -16,8 +16,9 @@
 
 
 .exp-container-hover.active
-  top: -2.1rem
+  top: -2.21rem
   opacity: 1
+  z-index: 1 !important
 
 
 .exp-container-hover .item-group
@@ -38,7 +39,29 @@
   display: flex
   justify-content: center
   align-items: center
-
+  cursor: crosshair
 
 .exp-container-hover .item img
   object-fit: contain
+
+.tooltip
+  transform: rotate(-30deg)
+  top: -5.6rem
+  left: -0.4rem
+  min-width: 12rem
+  display: flex
+  flex-direction: row
+  justify-content: start
+  opacity: 0
+  color: black
+
+.tooltip p
+  padding: 0.4rem 0.6rem
+  font-size: 0.8rem
+  letter-spacing: 0.06rem
+  border-radius: 0.8rem 0.4rem 0.4rem 0rem
+  background: #FFF
+
+
+.exp-container-hover .item:hover .tooltip
+  opacity: 1 !important

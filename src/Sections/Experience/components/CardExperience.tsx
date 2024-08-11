@@ -128,7 +128,7 @@ export default function CardExperience(props: propsInterface) {
             date date-start
             ${props.classes?.timeline?.date_start}
           `)}>
-            { props.data.date.start }
+            { props.data.date.end }
           </p>
           {
             props.data.date.helper !== '' &&
@@ -144,7 +144,7 @@ export default function CardExperience(props: propsInterface) {
             date date-end
             ${props.classes?.timeline?.date_end}
           `)}>
-            { props.data.date.end } 
+            { props.data.date.start }
           </p>
         </div>
 

@@ -18,8 +18,12 @@ import iwant_detail4 from '@/common/assets/img/projects/iwant/detail4.webp'
 import iwant_detail5 from '@/common/assets/img/projects/iwant/detail5.webp'
 
 // Internship QA
-import intern_qa_main from '@/common/assets/img/projects/intern/qa/main.webp'
-import intern_qa_team from '@/common/assets/img/projects/intern/qa/qa_team.webp'
+import scb_intern_qa_main from '@/common/assets/img/projects/intern/qa/main.webp'
+import scb_intern_qa_team from '@/common/assets/img/projects/intern/qa/qa_team.webp'
+import scb_intern_cert from '@/common/assets/img/certificates/scb/cert.webp'
+
+// Internship Doppio
+import doppio_my_picture from '@/common/assets/img/projects/intern/doppio/my_picture.jpg'
 
 // Hai Dashboard
 import hai_cert from '@/common/assets/img/certificates/hai_dashboard/cert.webp'
@@ -44,13 +48,55 @@ export interface dataTimelineInterface {
 
 export const dataTimeline: dataTimelineInterface[] = [
   {
+    title: `Fire Alarm Monitoring System ( WebApp )`,
+    subtitle: `( Freelance Project for a private company )`,
+    description: `Web application for monitoring fire alarm systems, including the ability to send notifications to users via Line Notify, and the ability to view the history of the fire alarm system`,
+    date: {
+      start: `Mar, 2024`,
+      end: `Aug, 2024`,
+      helper: '5 months',
+    },
+    link: ``,
+    tools_used: [
+      dev_tools.tools.robot_framework,
+      dev_tools.tools.playwright,
+      dev_tools.tools.gitlab,
+      dev_tools.languages.typescript,
+      dev_tools.languages.python,
+    ],
+    img_path: [
+      doppio_my_picture,
+    ],
+  },
+  {
+    title: `Automation Tester`,
+    subtitle: `( *Intership 4 months at Doppio Tech )`,
+    description: `Automated convenience store web app testing using the Playwright Framework, including using Gitlab CI for scheduling. Run test scripts and export daily test results to Slack and Gafana Dashboard and test mobile applications a bit more. (Appium Library)`,
+    date: {
+      start: `Nov, 2023`,
+      end: `Mar, 2024`,
+      helper: '4 months',
+    },
+    link: ``,
+    tools_used: [
+      dev_tools.tools.robot_framework,
+      dev_tools.tools.playwright,
+      dev_tools.tools.gitlab,
+      dev_tools.languages.typescript,
+      dev_tools.languages.python,
+    ],
+    img_path: [
+      doppio_my_picture,
+    ],
+  },
+  {
     title: `Hai Dashbaord ( WebApp )`,
     subtitle: `( Frontend  |  Cooperate with healthcare accreditation institute )`,
-    description: `The Project of Quality Data Project for Hospitals Nationwide Requested to cooperate with government agencies`,
+    description: `Nationwide hospital quality report project in collaboration with state enterprises`,
     date: {
       start: `May, 2023`,
-      end: `June, 2023`,
-      helper: '2 months',
+      end: `July, 2023`,
+      helper: '3 months',
     },
     link: `https://github.com/csnpch/HaiDashboard`,
     tools_used: [
@@ -88,8 +134,8 @@ export const dataTimeline: dataTimelineInterface[] = [
     subtitle: `( Fullstack  |  Project to facilitate work in university )`,
     description: `Web app for the field of IT that I am currently studying. made to facilitate the collection of money or suggest different places, including various features in the future that are going to happen`,
     date: {
-      start: `April, 2023`,
-      end: `Feb, 2023`,
+      start: `Feb, 2023`,
+      end: `April, 2023`,
       helper: '3 months',
     },
     link: `https://github.com/csnpch/ITuy`,
@@ -157,21 +203,23 @@ export const dataTimeline: dataTimelineInterface[] = [
     img_path: [matching_main],
   },
   {
-    title: `QA Tester ( Automation )`,
-    subtitle: `( Intership 2 months at Siam Commercial Bank )`,
-    description: `Automation testing for bank's teller machine employee services, use Python, Selenium, Robot framework, Postman, etc...`,
+    title: `Automation Tester`,
+    subtitle: `( *Intership 2 months at Siam Commercial Bank )`,
+    description: `Automation testing for bank's teller machine employee services, use Python, Selenium, Robot framework, Postman, etc..., (White-Library)`,
     date: {
-      start: `July, 2022`,
-      end: `June, 2022`,
+      start: `June, 2022`,
+      end: `July, 2022`,
       helper: '2 months',
     },
     link: `https://github.com/csnpch/iWant`,
     tools_used: [
-      dev_tools.languages.robot_framework,
+      dev_tools.tools.robot_framework,
       dev_tools.languages.python,
     ],
     img_path: [
-      intern_qa_team, intern_qa_main,
+      scb_intern_qa_team, 
+      scb_intern_qa_main,
+      scb_intern_cert
     ],
   },
 ] 
