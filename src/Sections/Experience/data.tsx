@@ -54,11 +54,11 @@ export const dataTimeline: dataTimelineInterface[] = [
   {
     title: `Fire Alarm Monitoring System ( WebApp )`,
     subtitle: `( Freelance Project for a private company )`,
-    description: `Web application for monitoring fire alarm systems, including the ability to send notifications to users via Line Notify, and the ability to view the history of the fire alarm system`,
+    description: `Web application for tracking fire alarm device in real-time, including being able to send notifications to users via Line Notify and being able to view the history of the alarm`,
     date: {
-      start: `Mar, 2024`,
-      end: `Aug, 2024`,
-      helper: '5 months',
+      start: `Apr, 2024`,
+      end: `Jul, 2024`,
+      helper: '4 months',
     },
     link: ``,
     tools_used: [
@@ -75,7 +75,7 @@ export const dataTimeline: dataTimelineInterface[] = [
   {
     title: `Automation Tester`,
     subtitle: `( *Intership 4 months at Doppio Tech )`,
-    description: `Automated convenience store web app testing using the Playwright Framework, including using Gitlab CI for scheduling. Run test scripts and export daily test results to Slack and Gafana Dashboard and test mobile applications a bit more. (Appium Library)`,
+    description: `Wrote scripts for playwright frameworks, ran test scripts for web applications, and exported daily test results to Slack and the Gafana Dashboard. Used Gitlab CI to schedule work, and used Appium for a little more mobile automation`,
     date: {
       start: `Nov, 2023`,
       end: `Mar, 2024`,
